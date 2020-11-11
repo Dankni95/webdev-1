@@ -5,3 +5,67 @@ body {
     background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(19, 45, 85, 1) 0%, rgba(19, 115, 135, 1) 100%);
 }
 
+
+.sand__img{
+    position: absolute;
+    width: 45%;
+    height: 20%;
+    top: -12%;
+    left: 0%;	
+
+}
+
+.sand__img--rotate{
+    transform: rotate(175deg);
+}
+
+.rev__img {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: -20%;
+    left: 85%;
+}
+.rev__img--rotate{
+    transform: rotate(185deg);
+}
+.monster__img{
+    position: absolute;
+    width: 35%;
+    height: 45%;
+    top: 35%;
+    left: 2%;
+    transform: scaleX(-1);
+}
+
+ /* monster movement in water animation */
+
+.monster__img--animation{
+    animation: monster 3s ease-in-out 1ms alternate infinite;
+   
+}
+@keyframes monster {
+    0% {
+        
+        height: 48%;
+        top: 24%;
+       left: -2%;
+        
+        
+    }
+
+    50% {
+        
+        height: 45%;
+        top: 30%;
+
+        
+         
+    }
+
+    100% {
+        top: 32%;
+        height: 43%;
+    }
+        
+    }
