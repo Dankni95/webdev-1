@@ -16,8 +16,18 @@ body {
   position: absolute;
   height: 10%;
   width: 10%;
-  top: 15%;
-  left: 15%;
+  top: 12%;
+  left: 26%;
+}
+
+.bird2__image {
+  position: absolute;
+  height: 7%;
+  width: 7%;
+  top: 23%;
+  left: 70%;
+  transform: scaleX(-1);
+
 }
 
 
@@ -67,7 +77,7 @@ body {
   }
 
   100% {
-    left: -27%;
+    left: -24%;
     transform: scale(1.7);
   }
 }
