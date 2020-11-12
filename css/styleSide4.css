@@ -4,3 +4,124 @@ body {
     background: rgb(2, 0, 36);
     background: linear-gradient(0deg, rgba(2, 0, 36, 0.9420810560552346) 40%, rgba(26, 128, 150, 0.9476832969515931) 100%);
 }
+#ruins {
+	position: absolute;
+	z-index: 5;
+	right: -5%;
+	bottom: 0%;
+}
+
+#cliff {
+	position: absolute;
+	z-index: 6;
+	left: 0%;
+	bottom: 0%
+}
+
+#eyes {
+	position: absolute;
+	z-index: 7;
+	height: 4%;
+	width: 4%;
+	right: 16%;
+	bottom: 14%;
+	transform: rotate(-10deg);
+	animation-name: blinking;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+
+}
+
+@keyframes blinking {
+	0% {
+		opacity: 1;
+		scale: ;
+	}
+
+	50% {
+		opacity: 0.3;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+#shipwreck {
+	position: absolute;
+	z-index: 4;
+	height: 12%;
+	width: 7%;
+	top: -17%;
+	left: 18%;
+	opacity: 0.5;
+	transform: rotate(75deg);
+	animation-delay: 2s;
+	animation-name: sinking;
+	animation-duration: 11s;
+	animation-iteration-count: 1;
+}
+
+#shipwreck_trail {
+	position: absolute;
+	z-index: 3;
+	height: 7%;
+	width: 7%;
+	top: -25%;
+	left: 17%;
+	opacity: 0.7;
+	transform: rotate(95deg);
+	animation-delay: 2s;
+	animation-name: sinkingtrail;
+	animation-duration: 11s;
+	animation-iteration-count: 1;
+}
+
+/* Animasjonene fort skipet og sporet etter skipet måtte være separate for at de skulle "matche" hverandre */
+@keyframes sinking {
+	0% {
+	}
+
+	100% {
+		top: 60%;
+	}
+}
+
+@keyframes sinkingtrail {
+	0% {
+	}
+	
+	100% {
+		top: 55%
+	}
+}
+
+#monster {
+	position: absolute;
+	z-index: 5;
+	transform: scaleX(-1);
+	height: 20%;
+	width: 20%;
+	top: 27%;
+	left: -7%;
+	animation-delay: 7s;
+	animation-name: peekaboo;
+	animation-duration: 8s;
+	animation-iteration-count: 1;
+}
+
+@keyframes peekaboo {
+	0% {
+		left: -7%;
+		top: 27%;
+	}
+
+	50% {
+		left: 4%;
+		top: 22%;
+	}
+
+	100% {
+		left: -7%;
+		top: 27%;
+	}
+}
