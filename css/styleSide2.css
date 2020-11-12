@@ -4,3 +4,182 @@ body {
     background: rgb(14,9,107);
     background: linear-gradient(0deg, rgba(14,9,107,0.9420810560552346) 5%, rgba(34,172,201,0.9476832969515931) 100%);
 }
+
+
+
+.page2_sand {
+
+    position: absolute;
+    max-width: 80%;
+    max-height: 33%;
+    transform:rotate(10deg);
+    top: 87%;
+    left: -2%;
+    z-index: 20;
+
+}
+
+.page2_sandcastle {
+    position: absolute;
+    max-block-size: 18%;
+    top: 80%;
+    left: 22%;
+}
+
+.page2_coral_red {
+        position: absolute;
+        max-block-size: 50%;
+        left: 85%;
+        top: 75%;
+        
+
+}
+
+.page2_coral_color {
+    position: absolute;
+    max-block-size: 30%;
+    top: 75%;
+    left: -5%;
+
+
+}
+
+.page2_boat {
+    position: absolute;
+    max-block-size: 38%;
+    top: -30%;
+    left: 2%;
+}
+
+.page2_crab {
+    position: absolute;
+    max-block-size: 10%;
+    top: 90%;
+    left: 52%;
+    z-index: 1;
+    transform: rotate(-35deg)
+
+
+}
+
+.page2_crab2 {
+    position: absolute;
+    max-block-size: 10%;
+    top: 90%;
+    left: 45%;
+    z-index: 21;
+    transform: rotate(35deg)
+
+
+}
+
+.page2_pearl {
+    position: absolute;
+    max-block-size: 10%;
+    top: 87%;
+    left: 49%;
+    z-index: 19;
+    
+
+
+}
+
+
+
+/*animasjoner diver*/
+.page2_diver_img_animation{
+    position: absolute;
+    max-block-size: 10%;
+    top: 15%;
+    left: 20%;
+    z-index: 25;
+    transform: rotate(90deg)
+    }
+
+
+
+
+
+.page2_light_img_animation {
+    position: absolute;
+    max-block-size: 20%;
+    top: 33%;
+    left: 21%;
+    z-index: 25;
+    opacity: 0.5;
+    transform: rotate(360deg)
+    
+
+
+}
+
+.diver_animation {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    animation: swimAround 10s;
+   
+
+
+}
+
+
+@keyframes swimAround {
+
+    0% {
+        top: -250px;
+    }
+
+    50%
+    {
+        top: 250px;
+
+    }
+    75% {
+        top: 250px;
+
+    }
+
+    100% {
+        top: 500px;
+
+    }
+}
+
+
+
+
+
+/*animasjon for ubåt */
+.allpages_sub_passangers_img_animation {
+    position: absolute;
+    left: 800px;
+    max-width: 30%;
+    max-height: 30%;
+    animation: moveDown 15s 
+}
+
+
+@keyframes moveDown {
+    0% {
+        top: -250px;
+    }
+
+    50%
+    {
+        top: 250px;
+
+    }
+    75% {
+        top: 250px;
+
+    }
+
+    100% {
+        top: 500px;
+
+    }
+}
+
+
+
