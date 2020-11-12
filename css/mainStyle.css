@@ -1,0 +1,13 @@
+/*
+Stylesheet for all pages, here changes go over all pages.
+*/
+
+* {
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}

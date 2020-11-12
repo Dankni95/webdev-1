@@ -53,10 +53,10 @@ body {
   z-index: 1;
   opacity: 2;
 
-} 
+}
 
 .boat__div--animation {
-  animation: boat 5s linear forwards;
+  animation: boat 1s linear forwards;
 }
 
 @keyframes boat {
@@ -118,4 +118,99 @@ body {
   width: 105%;
   top: 72%;
   left: -5%;
+}
+
+.desc__toggle {
+  position: absolute;
+  font-size: 20px;
+  cursor: pointer;
+  width: 25%;
+  height: 10%;
+  top: 37%;
+  left: 65%;
+  z-index: 100;
+}
+
+#toggle__1 {
+  display: none;
+}
+
+
+
+
+#toggle__1:checked~ .rope__image{
+  
+  animation: rope 5s ease forwards;
+  
+  
+}
+#toggle__1:checked~ .anchor__image{
+  animation: anchor 1s ease forwards ;
+  
+}
+
+.rope__image {
+  position: absolute;
+  height: 2%;
+  width: 2%;
+  left: 25%;
+  top: 95%;
+  z-index: 3;
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.anchor__image {
+  position: fixed;
+  height: 10%;
+  width: 10%;
+  top: 93%;
+  left: 19%;
+  z-index: 3;
+  transform: rotateY(40deg);
+  opacity: 0;
+
+}
+
+
+
+@keyframes anchor {
+  0% {
+    opacity: 1;
+  }
+
+
+  50% {}
+
+  100% {
+    top: 100%;
+    opacity: 1;
+
+  }
+}
+
+
+@keyframes rope {
+  0% {
+    
+    opacity: 1;
+    
+  }
+
+
+  50% {
+    
+    opacity: 1;
+
+  }
+
+  100% {
+    
+    opacity: 1;
+    width: 15%;
+   left: 18%;
+   top: 107%;
+
+
+  }
 }
