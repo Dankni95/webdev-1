@@ -12,15 +12,48 @@ body {
 
 /* boat placeholder with geir og geirine */
 
+.bird__image {
+  position: absolute;
+  height: 10%;
+  width: 10%;
+  top: 15%;
+  left: 15%;
+}
+
+
+
+.pier__image {
+  position: absolute;
+  height: 25%;
+  width: 50%;
+  top: 80%;
+  left: -7%;
+  z-index: 1;
+}
+
+.submarine__image {
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  top: 67%;
+  left: 5%;
+}
+
+
+
+
+
 .boat {
   position: absolute;
   height: 52%;
   width: 52%;
   top: 40%;
   left: 55%;
+  transform: rotate(15deg);
   z-index: 1;
+  opacity: 2;
 
-}
+} 
 
 .boat__div--animation {
   animation: boat 5s linear forwards;
