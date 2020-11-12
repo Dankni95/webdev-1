@@ -6,20 +6,20 @@ body {
 }
 
 
-.sand__img{
+.sand__img {
     position: absolute;
     width: 45%;
     height: 20%;
     top: -12%;
-    left: 0%;	
+    left: 0%;
 
 }
 
-.sand__img--rotate{
+.sand__img--rotate {
     transform: rotate(175deg);
 }
 
-.rev__img {
+/* .rev__img {
     position: absolute;
     width: 50%;
     height: 50%;
@@ -27,9 +27,12 @@ body {
     left: 85%;
 }
 .rev__img--rotate{
-    transform: rotate(185deg);
-}
-.monster__img{
+    transform: rotate(185deg); 
+} */
+
+/* cursor pointer on action elements
+ */
+.monster__img {
     position: absolute;
     width: 35%;
     height: 45%;
@@ -38,34 +41,129 @@ body {
     transform: scaleX(-1);
 }
 
- /* monster movement in water animation */
+/* monster movement in water animation */
 
-.monster__img--animation{
+.monster__img--animation {
     animation: monster 3s ease-in-out 1ms alternate infinite;
-   
+
 }
+
 @keyframes monster {
     0% {
-        
+
         height: 48%;
-        top: 24%;
-       left: -2%;
-        
-        
+
+
+
     }
 
     50% {
-        
-        height: 45%;
-        top: 30%;
 
-        
-         
+        height: 45%;
+        padding-left: 10px;
+
+
+
     }
 
     100% {
-        top: 32%;
         height: 43%;
     }
+
+}
+
+.sub__image {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 20%;
+    left: 60%;
+}
+
+/* sub and misile water effect */
+
+.armed__sub img {
+    animation: monster 7s linear alternate infinite;
+}
+
+.missile__image {
+    position: absolute;
+    width: 5%;
+    height: 1%;
+    top: 37%;
+    left: 65%;
+    transform: rotate(270deg);
+    z-index: 2;
+}
+
+/* .missile__image--animation {
+    left: 65%;
+    opacity: 1;
+    transition: 1s 500ms all ease-in;
+}
+
+
+.missile__image--animation:hover{
+    left: 29%;
+    opacity: 0;
+    
+} */
+
+/* @keyframes shoot {
+    0% {
+
+
         
+
     }
+
+    50% {}
+
+    100% {
+
+        left: 5%;
+        background-color: red;
+
+    }
+} */
+
+.test{
+    position: absolute;
+    width: 35%;
+    height: 45%;
+    top: 15%;
+    left: 2%;
+    opacity: 0;
+    transform: scale(1);
+    transition: 0.5s all ease-in;     
+
+}
+#toggle-1:checked ~ .test{
+      opacity: 1;
+      transform: scale(1.5);
+}
+  .desc-toggle {
+      position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    width: 25%;
+    height: 10%;
+    top: 37%;
+    left: 65%;
+    z-index: 100;
+  }
+  
+  #toggle-1 {
+    display: none;
+  }
+  
+  .missile__image {
+    left: 65%;
+    transition: 0.5s all ease-in;     
+           
+  }
+  #toggle-1:checked ~ .missile__image {
+    left: 29%; 
+    opacity: 0;
+  }                 
+  
