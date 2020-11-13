@@ -19,9 +19,10 @@ body {
 
 .sand__img--rotate {
     transform: rotate(175deg);
-    
+
 }
-    /* plant positioning and water effect */
+
+/* plant positioning and water effect */
 
 .rev__img {
     position: absolute;
@@ -34,7 +35,7 @@ body {
 
 .rev__img--rotate {
     transform: rotate(185deg);
-    
+
 }
 
 .monster__img {
@@ -54,7 +55,7 @@ body {
     position: absolute;
     width: 40%;
     height: 40%;
-    top: 20%;
+    top: 25%;
     left: 60%;
 }
 
@@ -62,14 +63,39 @@ body {
 
 .missile__image {
     position: absolute;
-    width: 5%;
-    height: 1%;
-    top: 37%;
+    width: 4%;
+    height: 47%;
+    top: 39%;
     left: 65%;
     transform: rotate(270deg);
-    z-index: 2;
+    z-index: -1;
+    animation: hideMissile  4s linear;
 }
 
+/* hiding missile behind sub with animation because i cant use opacity.. */
+
+@keyframes hideMissile {
+    0% {
+        top: -50%;
+
+
+    }
+
+
+    50% {
+        top: 39%;
+        left: 55%;
+
+    }
+
+
+    100% {
+        top: 25%;
+        left: 72%;
+
+    }
+
+}
 
 
 .explosion__image {
@@ -85,8 +111,9 @@ body {
 }
 
 .missile__image {
-    left: 65%;
+    left: 75%;
     transition: 300ms all ease-in;
+    opacity: 1;
 
 }
 
@@ -121,13 +148,66 @@ body {
 
 }
 
+/* animation placeholder */
+
+
+
+
+
+
+@keyframes subEntry {
+    0% {
+        opacity: 1;
+        top: -80%;
+
+
+    }
+
+
+    50% {
+        opacity: 1;
+        top: 25%;
+        left: 40%;
+
+    }
+
+
+    100% {
+        top: 25%;
+        left: 60%;
+        opacity: 1;
+
+    }
+
+}
+@keyframes subExit {
+    0% {
+        top: 25%;
+        left: 60%;
+
+    }
+
+
+    50% {
+        
+
+    }
+
+
+    100% {
+        top: 100%;
+        
+
+    }
+
+}
+
 /* rocket pushes out monster animation */
 #toggle-1:checked~.monster__img {
 
     animation: push 800ms linear 100ms forwards;
 }
 
-/* animation placeholder */
 
 @keyframes push {
     0% {
@@ -155,20 +235,24 @@ body {
 /* monster movement in water animation */
 
 .monster__img--animation {
-    animation: waterEffect 3s ease-in-out 1ms alternate 10;
+    animation: waterEffect 3s ease-in-out 1ms alternate infinite;
 
 
 }
 
-/* sub and misile water effect */
+/* sub and misile water effect // and sub entry */
 
-.armed__sub img {
-    animation: waterEffect 7s linear alternate infinite;
+.sub__image {
+    animation: waterEffect 7s linear alternate infinite, subEntry 5s, subExit 5s ease 10s;
+
 }
+
+/* .missile__image {
+    animation: waterEffect 7s linear 5s alternate infinite;
+} */
 
 @keyframes waterEffect {
     0% {
-
         height: 48%;
 
 
@@ -202,11 +286,11 @@ body {
 
 .desc__label {
     position: absolute;
-    font-size: 30px;
+    font-size: 25%;
     cursor: pointer;
     width: 13%;
     height: 9%;
-    top: 70%;
+    top: 68%;
     left: 59%;
     z-index: 1;
     opacity: 0;
@@ -216,17 +300,23 @@ body {
 
 .fake__h1 {
     position: absolute;
-    font-size: 30px;
+    font-size: 1vmax;
     cursor: pointer;
-    width: 10%;
-    height: 5%;
-    top: 67%;
+    width: 8%;
+    height: 4%;
+    top: 70%;
     left: 59%;
     z-index: -1;
-    border: 2px solid blueviolet;
+    border: 0.5vh solid blueviolet;
     text-align: center;
     color: red;
+    opacity: 1;
+    /* transition: 1s 5s ease opacity ;*/
 }
+
+/* .fake__h1{
+    opacity: 1;
+} */
 
 /* after one click hide the fake button */
 
@@ -236,16 +326,19 @@ body {
 }
 
 
+
 /* fishes placeholder */
+.fish {
+    z-index: -1;
+}
+
 .fish1__image {
     position: absolute;
     width: 3%;
     height: 2%;
     top: 67%;
     left: 59%;
-    z-index: -1;
-    transform: scaleX(-1);
-    animation: fishes 10s ease-in alternate infinite;
+    animation: fishes 50s ease-in alternate infinite;
 
 }
 
@@ -255,8 +348,7 @@ body {
     height: 3%;
     top: 77%;
     left: 59%;
-    z-index: -1;
-    animation: fishes 17s ease-in alternate infinite;
+    animation: fishes 29s ease-in alternate infinite;
 
 }
 
@@ -266,8 +358,7 @@ body {
     height: 4%;
     top: 57%;
     left: 49%;
-    z-index: -1;
-    animation: fishes 23s ease-in normal infinite;
+    animation: fishes 26s ease-in normal infinite;
 
 }
 
@@ -275,45 +366,42 @@ body {
     position: absolute;
     width: 7%;
     height: 5%;
-    top: 77%;
-    left: 29%;
-    z-index: -1;
-    transform: scaleX(-1);
-    animation: fishes 15s ease-in alternate infinite;
+    top: 199%;
+    left: 129%;
+    animation: fishes 50s ease-in-out 5s infinite;
 }
 
 /* reused minifishes from fish 1 */
 
-.fish1_1__image {
-    position: absolute;
+.minifishes__div img {
+    z-index: -1;
     width: 1%;
     height: 1%;
+}
+
+/* positioning  */
+
+.fish1_1__image {
+    position: absolute;
     top: 37%;
     left: 49%;
-    z-index: -1;
     transform: scaleX(-1);
-    animation: fishes 29s ease-in alternate infinite;
+    animation: fishes 29s ease-in 1s alternate infinite;
 
 }
 
 .fish1_2__image {
     position: absolute;
-    width: 1%;
-    height: 1%;
     top: 17%;
     left: 79%;
-    z-index: -1;
-    animation: fishes 22s ease-in normal infinite;
+    animation: fishes 27s ease-in normal infinite;
 
 }
 
 .fish1_3__image {
     position: absolute;
-    width: 1%;
-    height: 1%;
     top: 97%;
     left: 39%;
-    z-index: -1;
     transform: scaleX(-1);
     animation: fishes 25s ease-in alternate-reverse infinite;
 
@@ -321,35 +409,29 @@ body {
 
 .fish1_4__image {
     position: absolute;
-    width: 1%;
-    height: 1%;
     top: 87%;
     left: 89%;
-    z-index: -1;
-    animation: fishes 15s ease-in alternate-reverse infinite;
+    animation: fishes 15s ease-in 500ms alternate-reverse infinite;
 
 }
 
 .fish1_5__image {
     position: absolute;
-    width: 1%;
-    height: 1%;
     top: 37%;
     left: 19%;
-    z-index: -1;
     transform: scaleX(-1);
     animation: fishes 17s ease-in alternate-reverse infinite;
 
 }
 
-/* animation: monster 7s linear alternate infinite; */
+
 
 /* fishes movement and water effect */
 
 @keyframes fishes {
     0% {
         top: 100%;
-        transform: translateX(200px);
+        transform: translateX(420%);
     }
 
     50% {
@@ -361,7 +443,7 @@ body {
 
     100% {
         left: -100%;
-        transform: translateY(-190px);
+        transform: translateY(-700%);
         opacity: 0.4;
 
     }
