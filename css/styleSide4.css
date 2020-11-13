@@ -4,29 +4,21 @@ body {
     background: rgb(2, 0, 36);
     background: linear-gradient(0deg, rgba(2, 0, 36, 0.9420810560552346) 40%, rgba(26, 128, 150, 0.9476832969515931) 100%);
 }
-.ruins {
+#ruins {
 	position: absolute;
 	z-index: 5;
 	right: -5%;
 	bottom: 0%;
 }
 
-.cliff_left {
+#cliff {
 	position: absolute;
 	z-index: 6;
 	left: 0%;
 	bottom: 0%
 }
 
-.cliff_right {
-	position: absolute;
-	z-index: 4;
-	transform: scaleX(-1);
-	bottom: -20%;
-	right: 5%;
-}
-
-.eyes {
+#eyes {
 	position: absolute;
 	z-index: 7;
 	height: 4%;
@@ -54,7 +46,7 @@ body {
 	}
 }
 
-.shipwreck {
+#shipwreck {
 	position: absolute;
 	z-index: 4;
 	height: 12%;
@@ -69,7 +61,7 @@ body {
 	animation-iteration-count: 1;
 }
 
-.shipwreck_trail {
+#shipwreck_trail {
 	position: absolute;
 	z-index: 3;
 	height: 7%;
@@ -79,12 +71,12 @@ body {
 	opacity: 0.7;
 	transform: rotate(95deg);
 	animation-delay: 2s;
-	animation-name: sinkingTrail;
+	animation-name: sinkingtrail;
 	animation-duration: 11s;
 	animation-iteration-count: 1;
 }
 
-/* Animasjonene for skipet og sporet etter skipet måtte være separate for at de skulle "matche" hverandre */
+/* Animasjonene fort skipet og sporet etter skipet måtte være separate for at de skulle "matche" hverandre */
 @keyframes sinking {
 	0% {
 	}
@@ -94,7 +86,7 @@ body {
 	}
 }
 
-@keyframes sinkingTrail {
+@keyframes sinkingtrail {
 	0% {
 	}
 	
@@ -103,7 +95,7 @@ body {
 	}
 }
 
-.monster {
+#monster {
 	position: absolute;
 	z-index: 5;
 	transform: scaleX(-1);
@@ -124,118 +116,12 @@ body {
 	}
 
 	50% {
-		left: 2.5%;
+		left: 4%;
 		top: 22%;
 	}
 
 	100% {
 		left: -7%;
 		top: 27%;
-	}
-}
-
-.submarine {
-	position: absolute;
-	height: 15%; 
-	width: 15%;
-	z-index: 7;
-	right: 10%;
-}
-
-.sub_trail {
-	position: absolute;
-	height: 10%;
-	width: 10%;
-	opacity: 0.7;
-	z-index: 7;
-	right: 2.5%;
-	top: 4.5%;
-}
-
-.magnet {
-	position: absolute;
-	height: 8%;
-	width: 5%;
-	z-index: 6;
-	right: 16%;
-	top: 13%;
-}
-
-.searchlight {
-	position: absolute;
-	height: 18%;
-	width: 6%;
-	opacity: 0.7;
-	z-index: 7;
-	transform: rotate(90deg);
-	right: 25.2%;
-	top: 1.7%;
-}
-
-.submarine_mission {
-	position: absolute;
-	z-index: 6;
-	height: 100%; 
-	width: 100%;
-	left: 15%;
-	top: -20%;
-	animation-name: treasureDive;
-	animation-delay: 1s;
-	animation-duration: 18s;
-	animation-iteration-count: 1;
-}
-
-.treasure {
-	position: absolute;
-	height: 17%;
-	width: 17%;
-	z-index: 6;
-	bottom: 5%;
-	right: 26%;
-	animation: treasureGet;
-	animation-delay: 1.5s;
-	animation-duration: 19.1s;
-	animation-iteration-count: 1;
-}
-
-@keyframes treasureDive {
-	0% {
-
-	}
-
-	48% {
-		top: 64.5%;
-		left: -15%;
-	}
-
-	52% {
-		top: 64.5%;
-		left: -15%;
-	}
-
-	100% {
-		top: -27%;
-		left: -30%;
-	}
-}
-
-@keyframes treasureGet {
-	0% {
-		bottom: 5%;
-		right: 26%;
-		z-index: 6;
-	}
-	46% {
-		bottom: 5%;
-		right: 26%;
-		z-index: 6;
-	}
-	90% {
-		z-index: 6;
-	}
-	100% {
-		bottom: 109%;
-		right: 42%;
-		z-index: 1;
 	}
 }
