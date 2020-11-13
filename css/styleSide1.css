@@ -2,10 +2,8 @@
 
 body {
   background: rgb(2, 0, 36);
-  background: linear-gradient(180deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(16, 82, 184, 1) 0%,
-      rgba(0, 212, 255, 1) 100%);
+  background-image: linear-gradient(to right bottom, #d0db32, #ffac23, #ff7751, #ff4986, #d846bb, #b25ad1, #8269df, #3d74e3, #5081e5, #628ee6, #749be7, #86a8e7);   
+  
 }
 
 
@@ -219,6 +217,7 @@ body {
   width: 105%;
   top: 72%;
   left: -5%;
+  mix-blend-mode: overlay;
 }
 
 .desc__toggle {
