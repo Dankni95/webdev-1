@@ -7,7 +7,7 @@ body {
 
 
 
-.page2_sand {
+.sand {
 
     position: absolute;
     max-width: 80%;
@@ -19,7 +19,7 @@ body {
 
 }
 
-.page2_sandcastle {
+.sandcastle {
     position: absolute;
     max-block-size: 18%;
     top: 80%;
@@ -27,7 +27,7 @@ body {
     z-index: 26;
 }
 
-.page2_coral_red {
+.coral_red {
         position: absolute;
         max-block-size: 50%;
         left: 85%;
@@ -36,7 +36,7 @@ body {
 
 }
 
-.page2_coral_color {
+.coral_color {
     position: absolute;
     max-block-size: 30%;
     top: 75%;
@@ -46,7 +46,7 @@ body {
 
 }
 
-.page2_boat {
+.boat {
     position: absolute;
     max-block-size: 38%;
     top: -30%;
@@ -160,13 +160,13 @@ body {
 
 @keyframes moveDown {
     0% {
-        top: -250px;
+        top: -25%;
         transform: scale(0.3);
         opacity: 0.4;
     }
     20% {
 
-        top: 10px;
+        top: 10%;
         transform: scale (0.6);
         opacity:1;
 
@@ -174,20 +174,20 @@ body {
 
     50%
     {
-        top: 250px;
+        top: 30%;
         transform: scale(1);
         opacity: 1;
 
     }
     75% {
-        top: 250px;
+        top: 30%;
         transform: scale(1);
         opacity:1;
 
     }
 
     100% {
-        top: 1000px;
+        top: 100%;
         transform: scale(0.2);
         opacity: 0.4;
 
@@ -201,9 +201,9 @@ body {
     position: absolute;
     opacity: 0.4;
     max-block-size: 10%;
-    left: 50;
-    top: 70%;
-    animation: weirdSwim 6s linear infinite;
+    left: 5%;
+    top: 60%;
+    animation: weirdSwim 10s linear infinite;
 
 }
 
@@ -224,7 +224,7 @@ body {
         transform: translate(0,0) rotateY(0deg);
 
     }
-
+/*Using px here for weirdSwim animations. No impact on sizing */
 
 
 }
@@ -296,7 +296,7 @@ body {
 
     }
 
-
+/*also using px here. No impact on zoom */
 
 
 
@@ -317,8 +317,8 @@ body {
 }
 
 @keyframes stonedShark {
-    from {left:0px;}
-    to {left:1500px;}
+    from {left:1%;}
+    to {left:150%;}
 
 
 }
@@ -450,19 +450,18 @@ body {
 
 /*Octopus greets the visitors*/
 .speechBubble {
-    margin: 0;
-    font-size: 13px;
+    font-size: 1.3vmax;
     font-weight: bold;
     max-width: 13%;
     max-height: 22%;
     text-align: center;
     background: lightblue;
     color:navy;
-    padding: 0.5em 1em;
+    padding: 1vh 1vh 1vh 1vh;
     position: absolute;
     top: 50%;
     left: 54%;
-    border-radius: 0.9em 0.9em 0.9em 0.9em;
+    border-radius: 1vmax;
     animation: speak 20s linear forwards  ;
     z-index: 4;
 
@@ -628,16 +627,18 @@ body {
 
 
 .button_nextPage {
-
+    font-size: 1.25vmax;
+    text-align: center;
+    padding-top:0.7%;
     position: absolute;
-    border: 5px solid white;
+    border: 0.5vh solid white;
     background: linear-gradient(0deg, rgb(0, 38, 77) 0%, rgb(51, 153, 255) 100%);
     z-index:100;
     max-width: 15%;
     max-height: 10%;
     left: 65%;
     top: 85%;
-    border-radius: 0.9em 0.9em 0.9em 0.9em;
+    border-radius: 1vmax;
     color: white;
     animation: buttonAnimation 1.3s  20s infinite forwards;
     
@@ -655,7 +656,7 @@ a:link {
 
 
 a:hover {
-    background: linear-gradient(0deg, blue 0%, white 100%);
+    background: linear-gradient(0deg, red 0%, white 100%);
    
     
     }
