@@ -57,44 +57,6 @@ body {
     left: 60%;
 }
 
-
-
-.missile__image {
-    position: absolute;
-    width: 4%;
-    height: 47%;
-    top: 34%;
-    transform: rotate(270deg);
-    z-index: -1;
-    animation: hideMissile  4s linear;
-}
-
-/* hiding missile behind sub with animation because i cant use opacity.. */
-
-@keyframes hideMissile {
-    0% {
-        top: -50%;
-
-
-    }
-
-
-    50% {
-        top: 40%;
-        left: 56%;
-
-    }
-
-
-    100% {
-        top: 27%;
-        left: 70%;
-
-    }
-
-}
-
-
 .explosion__image {
     position: absolute;
     width: 35%;
@@ -107,9 +69,23 @@ body {
 
 }
 
+
+
+.missile__image {
+    position: absolute;
+    width: 4%;
+    height: 47%;
+    top: 34%;
+    transform: rotate(270deg);
+    z-index: -1;
+}
+
+
+
+
 .missile__image {
     left: 75%;
-    transition: 350ms all ease-in;
+    transition: 550ms all ease-in;
     opacity: 1;
 
 }
@@ -120,7 +96,7 @@ body {
 /* checkbox for missile animation  */
 
 #toggle-1:checked~.missile__image {
-    left: 29%;
+    left: 35%;
     opacity: 0;
 
 }
@@ -152,7 +128,7 @@ body {
 /* rocket pushes out monster animation */
 #toggle-1:checked~.monster__img {
 
-    animation: push 800ms linear 100ms forwards;
+    animation: push 900ms linear 100ms forwards;
 }
 
 
@@ -165,15 +141,14 @@ body {
 
 
     50% {
-        left: -100%;
+        left: -150%;
         transform: rotate(345deg);
 
     }
 
 
     100% {
-        opacity: 0;
-        display: none;
+        left: -150%;
 
     }
 
@@ -190,7 +165,7 @@ body {
 /* water effect // and sub entry/exit */
 
 .sub__image--animation {
-    animation: waterEffect 7s linear alternate infinite, subEntry 5s, subExit 5s ease 15s forwards;
+    animation: waterEffect 7s linear alternate infinite, subEntry 10s, subExit 9s ease 18s forwards;
 
 }
 
@@ -218,6 +193,7 @@ body {
     }
 
 }
+
 @keyframes subEntry {
     0% {
         opacity: 1;
@@ -243,10 +219,11 @@ body {
     }
 
 }
+
 @keyframes subExit {
     0% {
         top: 25%;
-        left: 50%;
+        left: 60%;
 
     }
 
@@ -254,11 +231,45 @@ body {
 
     100% {
         top: 100%;
-        
+
 
     }
 
 }
+        /* missile animation hiding behind sub and reusing push animation to hide */
+
+        .missile__image--animation{
+            animation: hideMissile 8.5s linear, push 1ms ease 16s forwards;
+        
+        }
+        
+        /* hiding missile behind sub with animation because i cant use opacity.. */
+        
+        @keyframes hideMissile {
+            0% {
+                top: -45%;
+                width: 1%;
+                height: 17%;
+        
+            }
+        
+        
+            50% {
+                top: 45%;
+                left: 54%;
+        
+            }
+        
+        
+            100% {
+                top: 30%;
+                left: 72%;
+        
+            }
+            
+        }
+        
+        
 
 /* hiding checkbox button placeholder */
 
@@ -268,45 +279,56 @@ body {
     display: none;
 }
 
-/* hidden label button */
+/* label button */
 
 .desc__label {
     position: absolute;
     font-size: 25%;
-    cursor: pointer;
-    width: 13%;
-    height: 9%;
+    font-size: 1vmax;
+    color: whitesmoke;
+    line-height:170%;
+    text-align: center;
+    border: 0.5vh solid blueviolet;
+    width: 8%;
+    height: 5%;
     top: 68%;
     left: 59%;
     z-index: 1;
     opacity: 0;
-
+    animation: hideBtn 10s ease-out 7s forwards;
 
 }
 
-.fake__h1 {
-    position: absolute;
-    font-size: 1vmax;
-    cursor: pointer;
-    width: 8%;
-    height: 4%;
-    top: 70%;
-    left: 59%;
-    z-index: -1;
-    border: 0.5vh solid blueviolet;
-    text-align: center;
-    color: red;
-    opacity: 1;
-    /* transition: 1s 5s ease opacity ;*/
+        /* hiding button after 10s visibility  */
+
+
+@keyframes hideBtn {
+    0% {
+
+        opacity: 1;
+        cursor: pointer;
+
+    
+
+    }
+    99% {
+
+        opacity: 1;
+        cursor: pointer;
+
+    }
+
+    100% {
+
+        opacity: 0;
+        cursor: default;
+
+    }
 }
 
-/* .fake__h1{
-    opacity: 1;
-} */
+/* after one click hide the button */
 
-/* after one click hide the fake button */
-
-#toggle-1:checked~.fake__h1 {
+#toggle-1:checked~.desc__label {
     display: none;
 
 }
@@ -434,7 +456,8 @@ body {
 
     }
 }
-        /* next button animation in mainStyle.css */
-.nextBtn__image--animation{
-    animation: nextBtn 1s ease 10s infinite;
+
+/* next button animation in mainStyle.css */
+.nextBtn__image--animation {
+    animation: nextBtn 1s ease 20s infinite;
 }
