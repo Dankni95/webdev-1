@@ -2,8 +2,8 @@
 
 body {
   background: rgb(2, 0, 36);
-  background-image: linear-gradient(to right bottom, #d0db32, #ffac23, #ff7751, #ff4986, #d846bb, #b25ad1, #8269df, #3d74e3, #5081e5, #628ee6, #749be7, #86a8e7);   
-  
+  background-image: linear-gradient(to right bottom, #d0db32, #ffac23, #ff7751, #ff4986, #d846bb, #b25ad1, #8269df, #3d74e3, #5081e5, #628ee6, #749be7, #86a8e7);
+
 }
 
 
@@ -17,7 +17,7 @@ body {
   top: -3%;
   left: -1%;
   z-index: 1;
-  
+
 }
 
 
@@ -30,7 +30,7 @@ body {
   top: 3%;
   left: 25%;
   opacity: 0.8;
-  
+
 }
 
 .cloud2__image {
@@ -105,7 +105,7 @@ body {
   width: 7%;
   top: 63%;
   left: 70%;
-  
+
 }
 
 
@@ -239,15 +239,16 @@ body {
 
 
 
-#toggle__1:checked~ .rope__image{
-  
+#toggle__1:checked~.rope__image {
+
   animation: rope 5s ease forwards;
-  
-  
+
+
 }
-#toggle__1:checked~ .anchor__image{
-  animation: anchor 1s ease forwards ;
-  
+
+#toggle__1:checked~.anchor__image {
+  animation: anchor 1s ease forwards;
+
 }
 
 .rope__image {
@@ -293,25 +294,30 @@ body {
 
 @keyframes rope {
   0% {
-    
+
     opacity: 1;
-    
+
   }
 
 
   50% {
-    
+
     opacity: 1;
 
   }
 
   100% {
-    
+
     opacity: 1;
     width: 15%;
-   left: 18%;
-   top: 107%;
+    left: 18%;
+    top: 107%;
 
 
   }
+}
+
+/* next button animation in mainStyle.css */
+.nextBtn__image--animation {
+  animation: nextBtn 1s ease 10s infinite;
 }

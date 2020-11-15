@@ -12,7 +12,7 @@ Stylesheet for all pages, here changes go over all pages.
     box-sizing: border-box;
 }
 
-.nextBtnimage {
+.nextBtn__image {
     position: absolute;
     top: 85%;
     left: 93%;
@@ -21,7 +21,7 @@ Stylesheet for all pages, here changes go over all pages.
     opacity: 0;
 }
 
-.nextBtnimage:hover{
+.nextBtn__image:hover{
     transform: scale(1.3);
 }
 
