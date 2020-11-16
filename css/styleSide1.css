@@ -370,24 +370,66 @@ body {
   width: 105%;
   top: 72%;
   left: -5%;
-  mix-blend-mode: overlay;
 }
 
 /* anchor button animation start */
-.desc__toggle {
-  position: absolute;
-  font-size: 1vmax;
-  cursor: pointer;
-  width: 25%;
-  height: 10%;
-  top: 37%;
-  left: 65%;
-  z-index: 100;
-  border: 0.5vh solid blue;
-}
-
+/* hiding the toggle checkbox */
 #toggle__1 {
   display: none;
+}
+
+/* label button */
+
+.desc__toggle {
+  position: absolute;
+  font-size: 25%;
+  font-size: 1vmax;
+  color: whitesmoke;
+  line-height:170%;
+  text-align: center;
+  border: 0.5vh solid blueviolet;
+  width: 8%;
+  height: 5%;
+  top: 68%;
+  left: 59%;
+  z-index: 1;
+  opacity: 0;
+  animation: hideBtn 10s ease-out 7s forwards;
+
+}
+
+      /* hiding button after 10s visibility  */
+
+
+@keyframes hideBtn {
+  0% {
+
+      opacity: 1;
+      cursor: pointer;
+
+  
+
+  }
+  99% {
+
+      opacity: 1;
+      cursor: pointer;
+
+  }
+
+  100% {
+
+      opacity: 0;
+      cursor: default;
+
+  }
+}
+
+/* after one click hide the button */
+
+#toggle-1:checked~.desc__label {
+  display: none;
+
 }
 
 #toggle__1:checked~.rope__image {
