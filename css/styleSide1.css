@@ -328,7 +328,7 @@ body {
 }
 
 .boat__div--animation {
-  animation: boat 4s linear forwards;
+  animation: boat 1ms linear forwards;
 }
 
 @keyframes boat {
@@ -361,6 +361,7 @@ body {
   top: 65%;
   left: 76%;
   z-index: 0;
+
 }
 
 .geirine__image {
@@ -369,7 +370,90 @@ body {
   width: 9%;
   top: 64%;
   left: 65%;
-  z-index: 0;
+  z-index: -1;
+
+
+}
+
+
+
+
+@keyframes hideThem {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+.geir__image--animation {
+  animation: ontoPlatformGeir 5s linear 2s forwards;
+}
+
+.geirine__image--animation {
+  animation: ontoPlatformGeirine 5s linear 4s forwards;
+
+}
+
+@keyframes ontoPlatformGeir {
+  0% {
+    top: 57%;
+    left: 75%;
+  }
+  15% {
+    top: 51%;
+    left: 75%;
+  }
+  25% {
+    top: 51%;
+    left: 75%;
+  }
+
+  50% {
+    top: 51%;
+    left: 75%;
+  }
+
+  75% {}
+
+  100% {
+    
+    top: 51%;
+    left: 75%;
+  }
+
+}
+
+
+@keyframes ontoPlatformGeirine {
+  0% {
+    top: 56%;
+    left: 65%;
+  }
+  15% {
+    top: 56%;
+    left: 68%;
+  }
+  25% {
+    top: 56%;
+    left: 72%;
+  }
+
+  50% {
+    top: 50%;
+    left: 70%;
+  }
+
+  75% {}
+
+  100% {
+    top: 50%;
+    left: 70%;
+  }
+
 }
 
 .wave__image {
@@ -387,24 +471,66 @@ body {
   width: 105%;
   top: 72%;
   left: -5%;
-  mix-blend-mode: overlay;
 }
 
-/* anchor button animation start */
-.desc__toggle {
-  position: absolute;
-  font-size: 1vmax;
-  cursor: pointer;
-  width: 25%;
-  height: 10%;
-  top: 37%;
-  left: 65%;
-  z-index: 100;
-  border: 0.5vh solid blue;
-}
-
+/* hiding the toggle checkbox */
 #toggle__1 {
   display: none;
+}
+
+/* label button */
+
+.desc__toggle {
+  position: absolute;
+  font-size: 25%;
+  font-size: 1vmax;
+  color: whitesmoke;
+  line-height: 170%;
+  text-align: center;
+  border: 0.5vh solid blueviolet;
+  width: 8%;
+  height: 5%;
+  top: 88%;
+  left: 29%;
+  z-index: 1;
+  opacity: 0;
+  animation: hideBtn 10s ease-out 5s forwards;
+
+}
+
+/* hiding button after 10s visibility  */
+
+
+@keyframes hideBtn {
+  0% {
+
+    opacity: 1;
+    cursor: pointer;
+
+
+
+  }
+
+  99% {
+
+    opacity: 1;
+    cursor: pointer;
+
+  }
+
+  100% {
+
+    opacity: 0;
+    cursor: default;
+
+  }
+}
+
+/* after one click hide the button */
+
+#toggle-1:checked~.desc__toggle {
+  display: none;
+
 }
 
 #toggle__1:checked ~ .rope__image {
