@@ -222,7 +222,7 @@ body {
   width: 50%;
   top: 80%;
   left: -7%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .submarine__image {
@@ -231,6 +231,7 @@ body {
   width: 30%;
   top: 67%;
   left: 5%;
+  z-index: 1;
   
 }
 
@@ -321,12 +322,12 @@ body {
   top: 40%;
   left: 55%;
   transform: rotate(15deg);
-  z-index: 1;
+  z-index: 3;
   opacity: 2;
 }
 
 .boat__div--animation {
-  animation: boat 1ms linear forwards;
+  animation: boat 5s linear forwards;
 }
 
 @keyframes boat {
@@ -374,25 +375,12 @@ body {
 }
 
 
-
-
-@keyframes hideThem {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-
-}
-
 .geir__image--animation {
-  animation: ontoPlatformGeir 5s linear 2s forwards;
+  animation: ontoPlatformGeir 5s linear 7s forwards;
 }
 
 .geirine__image--animation {
-  animation: ontoPlatformGeirine 5s linear 4s forwards;
+  animation: ontoPlatformGeirine 5s linear 8s forwards;
 
 }
 
@@ -401,10 +389,12 @@ body {
     top: 57%;
     left: 75%;
   }
+
   15% {
     top: 51%;
     left: 75%;
   }
+
   25% {
     top: 51%;
     left: 75%;
@@ -413,14 +403,20 @@ body {
   50% {
     top: 51%;
     left: 75%;
+    transform: scale(1);
   }
 
-  75% {}
+  75% {
+    left: 72%;
+    transform: scale(1);
+    opacity: 1;
+  }
 
   100% {
-    
-    top: 51%;
-    left: 75%;
+    transform: scale(0.4);
+    opacity: 0;
+    top: 44%;
+    left: 67%;
   }
 
 }
@@ -431,10 +427,12 @@ body {
     top: 56%;
     left: 65%;
   }
+
   15% {
     top: 56%;
     left: 68%;
   }
+
   25% {
     top: 56%;
     left: 72%;
@@ -445,15 +443,48 @@ body {
     left: 70%;
   }
 
-  75% {}
+  75% {
+    left: 72%;
+    transform: scale(1);
+    opacity: 1;
+  }
 
   100% {
-    top: 50%;
-    left: 70%;
+    transform: scale(0.4);
+    opacity: 0;
+    top: 44%;
+    left: 67%;
   }
 
 }
+.hatch__image{
+  position: absolute;
+  max-block-size: 35%;
+  top: 55%;
+  left: 15%;
+  z-index: 0;
+  animation: hideHatch 1s ease 10s forwards;
+}
+.hatch__image--animation{
+  animation: hideHatch 1s ease 15s forwards;
+}
 
+@keyframes hideHatch {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    top: 58%;
+    left: 13%;
+    transform: rotate(-140deg);
+    opacity: 0.8;
+  }
+  100% {
+    
+    opacity: 0;
+  }
+}
 .wave__image {
   position: absolute;
   height: 10%;
@@ -482,7 +513,7 @@ body {
   position: absolute;
   font-size: 25%;
   font-size: 1vmax;
-  color: whitesmoke;
+  color: white;
   line-height: 170%;
   text-align: center;
   border: 0.5vh solid blueviolet;
@@ -490,7 +521,7 @@ body {
   height: 5%;
   top: 88%;
   left: 29%;
-  z-index: 1;
+  z-index: 3;
   opacity: 0;
   animation: hideBtn 10s ease-out 5s forwards;
 
@@ -526,8 +557,8 @@ body {
 
 /* after one click hide the button */
 
-#toggle-1:checked~.desc__toggle {
-  display: none;
+#toggle__1:checked~.desc__toggle  {
+  color: red;
 
 }
 
@@ -538,6 +569,7 @@ body {
 #toggle__1:checked ~ .anchor__image {
   animation: anchor 1s ease forwards;
 }
+
 
 .rope__image {
   position: absolute;
