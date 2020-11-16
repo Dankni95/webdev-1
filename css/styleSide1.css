@@ -467,6 +467,10 @@ body {
   z-index: 0;
   animation: hideHatch 1s ease 10s forwards;
 }
+.hatch__image--animation{
+  animation: hideHatch 1s ease 15s forwards;
+}
+
 @keyframes hideHatch {
   0% {
     opacity: 1;
