@@ -1,5 +1,7 @@
 /* Dette er stylesheet for side 2 */
 
+
+/*Static images. Only use for placements here*/
 body {
   background: rgb(14, 9, 107);
   background: linear-gradient(0deg,
@@ -7,7 +9,7 @@ body {
       rgba(34, 172, 201, 0.9476832969515931) 100%);
 }
 
-.sand {
+.sand__img {
   position: absolute;
   max-width: 80%;
   max-height: 33%;
@@ -17,7 +19,7 @@ body {
   z-index: 20;
 }
 
-.sandcastle {
+.sandcastle__img {
   position: absolute;
   max-block-size: 18%;
   top: 80%;
@@ -25,14 +27,15 @@ body {
   z-index: 26;
 }
 
-.coral_red {
+.coral_red__img {
   position: absolute;
   max-block-size: 50%;
   left: 85%;
   top: 75%;
 }
 
-.coral_color {
+
+.coral_color__img {
   position: absolute;
   max-block-size: 30%;
   top: 75%;
@@ -40,7 +43,7 @@ body {
   z-index: 20;
 }
 
-.page2_pearl {
+.pearl__img {
   position: absolute;
   max-block-size: 10%;
   top: 87%;
@@ -49,7 +52,7 @@ body {
 }
 
 /*crab animation slowly*/
-.page2_crab {
+.crab__img {
   position: absolute;
   max-block-size: 10%;
   top: 90%;
@@ -60,7 +63,7 @@ body {
   animation: crabMove 2s infinite;
 }
 
-.page2_crab2 {
+.crab2__img {
   position: absolute;
   max-block-size: 10%;
   top: 90%;
@@ -90,7 +93,8 @@ body {
 
 
 /*Animation for diver facing downwards*/
-.page2_diver_img_animation {
+
+.diver__img {
   position: absolute;
   max-block-size: 10%;
   top: 15%;
@@ -99,7 +103,7 @@ body {
   transform: rotate(90deg);
 }
 
-.page2_light_img_animation {
+.light__img {
   position: absolute;
   max-block-size: 18%;
   top: 33%;
@@ -109,7 +113,7 @@ body {
   transform: rotate(360deg);
 }
 
-.diver_animation {
+.diver--animation {
   position: relative;
   top: -50%;
   left: -20%;
@@ -125,7 +129,7 @@ body {
 }
 
 /*Animation for submarine, going downwards. Also depth-effect */
-.submarine {
+.submarine__img {
   position: absolute;
   top: -50%;
   left: 65%;
@@ -173,7 +177,7 @@ body {
 
 /*Animation for weird fish 1 og 2. Going back and forth in the background*/
 
-.weird_fish {
+.weirdFish__img {
   position: absolute;
   opacity: 0.4;
   max-block-size: 10%;
@@ -181,7 +185,7 @@ body {
   top: 60%;
 }
 
-.weird_fish--animation {
+.weirdFish--animation {
   animation: weirdSwim 10s linear infinite;
 }
 
@@ -205,7 +209,7 @@ body {
   /*Using px here for weirdSwim animations. No impact on sizing */
 }
 
-.weird_fish2 {
+.weirdFish2__img {
   position: absolute;
   opacity: 0.7;
   max-block-size: 10%;
@@ -213,7 +217,7 @@ body {
   top: 55%;
 }
 
-.weird_fish--animation2 {
+.weirdFish--animation2 {
   animation: weirdSwim2 15s linear infinite;
 }
 
@@ -237,11 +241,11 @@ body {
 
 /*turtle animation. Almost same animation as the last one */
 
-.page2_turtleBrah {
+.turtleBrah__img {
   position: absolute;
   opacity: 0.3;
   max-height: 13%;
-  right: 50%;
+  right: 33%;
   top: 40%;
   animation: turtle 12s linear infinite;
   z-index: 2;
@@ -273,7 +277,7 @@ body {
 
 /* stoned shark. Just going from left to right past the whole screen */
 
-.page2_stonedShark {
+.stonedShark__img {
   position: absolute;
   max-height: 13%;
   right: 50%;
@@ -296,7 +300,7 @@ body {
 }
 
 /* pearl blink animation. Simulating a shiny pearl */
-.page2_blink {
+.blink__img {
   position: absolute;
   max-block-size: 8%;
   top: 89.5%;
@@ -331,12 +335,12 @@ body {
 }
 
 /*anchor animation. Two seperate pictures moving together simulating one picture*/
-.page2_anchor {
+.anchor__img {
   position: absolute;
   max-block-size: 20%;
   transform: rotate(-20deg);
-  top: 1%;
-  left: 16%;
+  top: 0%;
+  left: 15.5%;
   z-index: 25;
 }
 
@@ -344,7 +348,7 @@ body {
   animation: anchorMove 5s forwards 0.5s;
 }
 
-.page2_rope {
+.rope__img {
   position: absolute;
   transform: rotate(90deg);
   width: 40%;
@@ -372,7 +376,7 @@ body {
 
 /*octopus animation*/
 
-.page2_octopus {
+.octopus__img {
   position: absolute;
   max-block-size: 20%;
   left: 48%;
@@ -456,7 +460,7 @@ body {
 
 /*surface boat on the waves simulating wavea. The rest of the animations do the same*/
 
-.boat {
+.boat__img {
   position: absolute;
   max-block-size: 38%;
   top: -30%;
@@ -489,7 +493,7 @@ body {
   }
 }
 
-.page2_flask {
+.flask__img {
   top: -5%;
   max-block-size: 15%;
   transform: rotate(70deg);
@@ -524,7 +528,7 @@ body {
   }
 }
 
-.page2_trash1 {
+.trash1__img {
   top: -5%;
   max-block-size: 15%;
   transform: rotate(40deg);
@@ -561,7 +565,7 @@ body {
 }
 
 /*uses same trashWave animation here, but decreases duration for some inconsistensy between the two trashbags*/
-.page2_trash2 {
+.trash2__img {
   top: -5%;
   max-block-size: 15%;
   transform: rotate(-40deg);
