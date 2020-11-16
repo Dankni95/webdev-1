@@ -2,21 +2,19 @@
 
 body {
   background: rgb(2, 0, 36);
-  background-image: linear-gradient(
-    to right bottom,
-    #d0db32,
-    #ffac23,
-    #ff7751,
-    #ff4986,
-    #d846bb,
-    #b25ad1,
-    #8269df,
-    #3d74e3,
-    #5081e5,
-    #628ee6,
-    #749be7,
-    #86a8e7
-  );
+  background-image: linear-gradient(to right bottom,
+      #d0db32,
+      #ffac23,
+      #ff7751,
+      #ff4986,
+      #d846bb,
+      #b25ad1,
+      #8269df,
+      #3d74e3,
+      #5081e5,
+      #628ee6,
+      #749be7,
+      #86a8e7);
 }
 
 .sun__image {
@@ -209,7 +207,7 @@ body {
   top: 48%;
   left: 10%;
   border-radius: 1vmax;
-  animation: speak 20s linear forwards  ;
+  animation: speak 20s linear forwards;
   z-index: 4;
   border: 0.5vh solid black;
   padding: 1% 1% 1% 1%;
@@ -229,10 +227,28 @@ body {
   position: absolute;
   height: 30%;
   width: 30%;
-  top: 67%;
-  left: 5%;
+  top: 66%;
+  left: 7%;
   z-index: 1;
-  
+
+}
+
+.submarine__image--animation {
+  animation: submarine 10s ease 17s;
+}
+
+@keyframes submarine {
+  0% {}
+
+  50% {
+    top: 67%;
+    left: 50%;
+  }
+
+  100% {
+    top: 120%;
+    left: 60%;
+  }
 }
 
 .pirateship--animation {
@@ -331,8 +347,7 @@ body {
 }
 
 @keyframes boat {
-  0% {
-  }
+  0% {}
 
   50% {
     left: 20%;
@@ -457,7 +472,8 @@ body {
   }
 
 }
-.hatch__image{
+
+.hatch__image {
   position: absolute;
   max-block-size: 35%;
   top: 55%;
@@ -465,7 +481,8 @@ body {
   z-index: 0;
   animation: hideHatch 1s ease 10s forwards;
 }
-.hatch__image--animation{
+
+.hatch__image--animation {
   animation: hideHatch 1s ease 15s forwards;
 }
 
@@ -480,11 +497,13 @@ body {
     transform: rotate(-140deg);
     opacity: 0.8;
   }
+
   100% {
-    
+
     opacity: 0;
   }
 }
+
 .wave__image {
   position: absolute;
   height: 10%;
@@ -557,16 +576,16 @@ body {
 
 /* after one click hide the button */
 
-#toggle__1:checked~.desc__toggle  {
+#toggle__1:checked~.desc__toggle {
   color: red;
 
 }
 
-#toggle__1:checked ~ .rope__image {
+#toggle__1:checked~.rope__image {
   animation: rope 5s ease forwards;
 }
 
-#toggle__1:checked ~ .anchor__image {
+#toggle__1:checked~.anchor__image {
   animation: anchor 1s ease forwards;
 }
 
