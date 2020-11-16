@@ -1,52 +1,62 @@
-/* Dette er stylesheet for side 4 */
-
+/* This is the stylesheet for page 4 */
 body {
     background: rgb(2, 0, 36);
     background: linear-gradient(0deg, rgba(2, 0, 36, 0.9420810560552346) 40%, rgba(26, 128, 150, 0.9476832969515931) 100%);
 }
-#ruins {
+.ruins__img {
 	position: absolute;
 	z-index: 5;
 	right: -5%;
 	bottom: 0%;
 }
 
-#cliff {
+.cliff_left__img {
 	position: absolute;
 	z-index: 6;
 	left: 0%;
 	bottom: 0%
 }
 
-#eyes {
+.cliff_right__img {
 	position: absolute;
-	z-index: 7;
+	z-index: 4;
+	transform: scaleX(-1);
+	bottom: -20%;
+	right: 5%;
+}
+
+.eyes__img {
+	position: absolute;
+	z-index: 5;
 	height: 4%;
 	width: 4%;
 	right: 16%;
 	bottom: 14%;
 	transform: rotate(-10deg);
+
+}
+
+.eyes--animation {
 	animation-name: blinking;
 	animation-duration: 3s;
-	animation-iteration-count: infinite;
-
+	animation-iteration-count: infinite;	
 }
 
 @keyframes blinking {
 	0% {
 		opacity: 1;
-		scale: ;
 	}
 
 	50% {
-		opacity: 0.3;
+		opacity: 0.5;
 	}
+
 	100%{
 		opacity: 1;
 	}
 }
 
-#shipwreck {
+.shipwreck__img {
 	position: absolute;
 	z-index: 4;
 	height: 12%;
@@ -55,13 +65,16 @@ body {
 	left: 18%;
 	opacity: 0.5;
 	transform: rotate(75deg);
+}
+
+.shipwreck--animation {
 	animation-delay: 2s;
 	animation-name: sinking;
 	animation-duration: 11s;
 	animation-iteration-count: 1;
 }
 
-#shipwreck_trail {
+.shipwreck_trail__img {
 	position: absolute;
 	z-index: 3;
 	height: 7%;
@@ -70,13 +83,17 @@ body {
 	left: 17%;
 	opacity: 0.7;
 	transform: rotate(95deg);
+
+}
+
+.shipwreck_trail--animation {
 	animation-delay: 2s;
-	animation-name: sinkingtrail;
+	animation-name: sinkingTrail;
 	animation-duration: 11s;
 	animation-iteration-count: 1;
 }
 
-/* Animasjonene fort skipet og sporet etter skipet måtte være separate for at de skulle "matche" hverandre */
+/* Separate animations for the trail and shipwreck to practice timing animations with each other. */
 @keyframes sinking {
 	0% {
 	}
@@ -86,7 +103,7 @@ body {
 	}
 }
 
-@keyframes sinkingtrail {
+@keyframes sinkingTrail {
 	0% {
 	}
 	
@@ -95,7 +112,7 @@ body {
 	}
 }
 
-#monster {
+.monster__img {
 	position: absolute;
 	z-index: 5;
 	transform: scaleX(-1);
@@ -103,10 +120,13 @@ body {
 	width: 20%;
 	top: 27%;
 	left: -7%;
+}
+
+.monster--animation {
 	animation-delay: 7s;
 	animation-name: peekaboo;
 	animation-duration: 8s;
-	animation-iteration-count: 1;
+	animation-iteration-count: 1;	
 }
 
 @keyframes peekaboo {
@@ -116,12 +136,185 @@ body {
 	}
 
 	50% {
-		left: 4%;
+		left: 2.5%;
 		top: 22%;
 	}
 
 	100% {
 		left: -7%;
 		top: 27%;
+	}
+}
+
+.submarine__img {
+	position: absolute;
+	height: 15%; 
+	width: 15%;
+	z-index: 7;
+	left: 7%;
+	top: 0%;
+}
+
+.sub_trail__img {
+	position: absolute;
+	height: 10%;
+	width: 10%;
+	opacity: 0.7;
+	z-index: 7;
+	left: 19%;
+	top: 4.4%;
+}
+
+.magnet__img {
+	position: absolute;
+	height: 8%;
+	width: 5%;
+	z-index: 6;
+	left: 11%;
+	top: 13%;
+}
+
+.searchlight__img {
+	position: absolute;
+	height: 18%;
+	width: 6%;
+	opacity: 0.7;
+	z-index: 7;
+	transform: rotate(90deg);
+	left: 0.7%;
+	top: 1.7%;
+}
+
+.treasure1__img {
+	position: absolute;
+	height: 17%; 
+	width: 17%;
+	z-index: 7;
+	left: 4%;
+	top: 12.5%;
+}
+
+.treasure1--animation {
+	animation-name: first_chest_trick;
+	animation-delay: 0s;
+	animation-duration: 20s;
+	animation-iteration-count: 1;
+}
+
+/* Chest is always carried by the sub, but kept hidden until "picked up" */
+@keyframes first_chest_trick {
+	0% {
+		opacity: 0;
+	}
+
+	49% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
+
+.submarine__div {
+	position: absolute;
+	z-index: 6;
+	height: 100%; 
+	width: 100%;
+	left: 80%;
+	top: -25%;
+}
+
+.submarine_dive--animation {
+	animation-name: treasureDive;
+	animation-delay: 0s;
+	animation-duration: 20s;
+	animation-iteration-count: 1;	
+}
+
+@keyframes treasureDive {
+	0% {
+
+	}
+
+	48% {
+		top: 65%;
+		left: 53%;
+	}
+
+	52% {
+		top: 65%;
+		left: 53%;
+	}
+
+	100% {
+		top: -25%;
+		left: 30%;
+	}
+}
+
+.treasure2__img {
+	position: absolute;
+	height: 17%;
+	width: 17%;
+	opacity: 0;
+	z-index: 7;
+	bottom: 5%;
+	right: 26%;
+}
+
+.treasure2--animation {
+	animation: second_chest_trick;
+	animation-delay: 0s;
+	animation-duration: 20s;
+	animation-iteration-count: 1;
+}
+
+/* When the chest gets "picked up", it stays but turns invisible */
+@keyframes second_chest_trick {
+	0% {
+		opacity: 1;
+	}
+
+	49% {
+		opacity: 1
+	}
+
+	50% {
+		opacity: 0;
+	}
+}
+
+.success__img {
+	position: absolute;
+	height: 35%;
+	width: 35%;
+	opacity: 0;
+	z-index: 10;
+	left: 35%;
+	top: 30%;
+}
+
+.success--animation {
+	animation: missionpassed;
+	animation-delay: 20s;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes missionpassed {
+	0% {
+		opacity: 1;
+		transform:scale(1.2);
+	}
+
+	50% {
+		opacity: 1;
+		transform:scale(0.9);
+	}
+
+	100% {
+		opacity: 1;
+		transform:scale(1.2);
 	}
 }
