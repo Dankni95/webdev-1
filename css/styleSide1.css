@@ -2,21 +2,22 @@
 
 body {
   background: rgb(2, 0, 36);
-  background-image: linear-gradient(to right bottom,
-      #d0db32,
-      #ffac23,
-      #ff7751,
-      #ff4986,
-      #d846bb,
-      #b25ad1,
-      #8269df,
-      #3d74e3,
-      #5081e5,
-      #628ee6,
-      #749be7,
-      #86a8e7);
+  background-image: linear-gradient(
+    to right bottom,
+    #d0db32,
+    #ffac23,
+    #ff7751,
+    #ff4986,
+    #d846bb,
+    #b25ad1,
+    #8269df,
+    #3d74e3,
+    #5081e5,
+    #628ee6,
+    #749be7,
+    #86a8e7
+  );
 }
-
 
 .sun__image {
   position: absolute;
@@ -24,12 +25,11 @@ body {
   width: 20%;
   top: -3%;
   left: -1%;
-  z-index: 1;
+  z-index: -1;
 }
 
 .sun--animation {
   animation: sun 4s infinite ease-in-out backwards;
-
 }
 
 @keyframes sun {
@@ -38,22 +38,16 @@ body {
     transform: scale(1);
   }
 
-
-
   50% {
     opacity: 0.5;
     transform: scale(0.9);
   }
 
-
-
   100% {
     opacity: 1;
     transform: scale(1);
   }
-
 }
-
 
 .cloud1__image {
   position: absolute;
@@ -92,6 +86,8 @@ body {
   z-index: 1;
 }
 
+/* Cloud movement from left to right */
+
 .cloud1--animation {
   animation: cloud1 155s infinite ease-in;
 }
@@ -109,15 +105,10 @@ body {
 }
 
 @keyframes cloud1 {
-
-
   100% {
     left: 200%;
   }
 }
-
-
-
 
 .bird__image {
   position: absolute;
@@ -138,23 +129,28 @@ body {
   z-index: 1;
 }
 
+
 .bird1--animation {
-  animation: bird1 12s infinite;
+  animation: bird1 30s infinite;
 }
 
+/* Bird animation from left to right */
+
 .bird2--animation {
-  animation: bird2 12s infinite;
+  animation: bird2 30s infinite;
 }
 
 @keyframes bird1 {
   0% {
-    left: -2%;
+    left: -5%;
   }
 
   100% {
-    left: 100%;
+    left: 120%;
   }
 }
+
+/* Second bird animation from rigth to left */
 
 @keyframes bird2 {
   0% {
@@ -162,7 +158,7 @@ body {
   }
 
   100% {
-    right: 1%;
+    left: -50%;
   }
 }
 
@@ -172,6 +168,7 @@ body {
   width: 15%;
   top: 53%;
   left: 1%;
+  z-index: -1;
 }
 
 .pirateship2__image {
@@ -200,6 +197,27 @@ body {
   transform: scaleX(-1);
 }
 
+.speechBubble {
+  font-size: 1vmax;
+  font-weight: normal;
+  max-width: 30%;
+  max-height: 15%;
+  text-align: center;
+  background: rgba(198, 167, 167, 0.311);
+  color: black;
+  line-height: 300%;
+  position: absolute;
+  top: 48%;
+  left: 10%;
+  border-radius: 10%;
+  animation: speak 20s linear forwards  ;
+  z-index: 4;
+  border: 0.5vh solid black;
+  
+  
+
+}
+
 .pier__image {
   position: absolute;
   height: 25%;
@@ -216,6 +234,7 @@ body {
   top: 67%;
   left: 5%;
   z-index: 1;
+  
 }
 
 .pirateship--animation {
@@ -242,7 +261,6 @@ body {
   100% {
     top: 55%;
   }
-
 }
 
 .pirateship2--animation {
@@ -269,7 +287,6 @@ body {
   100% {
     top: 64%;
   }
-
 }
 
 .smallboat--animation {
@@ -296,7 +313,6 @@ body {
   100% {
     top: 63%;
   }
-
 }
 
 /* boat placeholder with geir og geirine */
@@ -317,7 +333,8 @@ body {
 }
 
 @keyframes boat {
-  0% {}
+  0% {
+  }
 
   50% {
     left: 20%;
@@ -543,11 +560,11 @@ body {
 
 }
 
-#toggle__1:checked~.rope__image {
+#toggle__1:checked ~ .rope__image {
   animation: rope 5s ease forwards;
 }
 
-#toggle__1:checked~.anchor__image {
+#toggle__1:checked ~ .anchor__image {
   animation: anchor 1s ease forwards;
 }
 
