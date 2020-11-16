@@ -1,700 +1,610 @@
 /* Dette er stylesheet for side 2 */
 
 body {
-    background: rgb(14,9,107);
-    background: linear-gradient(0deg, rgba(14,9,107,0.9420810560552346) 5%, rgba(34,172,201,0.9476832969515931) 100%);
+  background: rgb(14, 9, 107);
+  background: linear-gradient(
+    0deg,
+    rgba(14, 9, 107, 0.9420810560552346) 5%,
+    rgba(34, 172, 201, 0.9476832969515931) 100%
+  );
 }
 
-
-
 .sand {
-
-    position: absolute;
-    max-width: 80%;
-    max-height: 33%;
-    transform:rotate(10deg);
-    top: 87%;
-    left: -2%;
-    z-index: 20;
-
+  position: absolute;
+  max-width: 80%;
+  max-height: 33%;
+  transform: rotate(10deg);
+  top: 87%;
+  left: -2%;
+  z-index: 20;
 }
 
 .sandcastle {
-    position: absolute;
-    max-block-size: 18%;
-    top: 80%;
-    left: 22%;
-    z-index: 26;
+  position: absolute;
+  max-block-size: 18%;
+  top: 80%;
+  left: 20%;
+  z-index: 26;
 }
 
 .coral_red {
-        position: absolute;
-        max-block-size: 50%;
-        left: 85%;
-        top: 75%;
-        
-
+  position: absolute;
+  max-block-size: 50%;
+  left: 85%;
+  top: 75%;
 }
 
 .coral_color {
-    position: absolute;
-    max-block-size: 30%;
-    top: 75%;
-    left: -5%;
-    z-index: 20;
-
-
-}
-
-.boat {
-    position: absolute;
-    max-block-size: 38%;
-    top: -30%;
-    left: 2%;
+  position: absolute;
+  max-block-size: 30%;
+  top: 75%;
+  left: -5%;
+  z-index: 20;
 }
 
 .page2_crab {
-    position: absolute;
-    max-block-size: 10%;
-    top: 90%;
-    left: 52%;
-    z-index: 1;
-    transform: rotate(-35deg);
-    opacity: 0.6;
-
-
+  position: absolute;
+  max-block-size: 10%;
+  top: 90%;
+  left: 52%;
+  z-index: 1;
+  transform: rotate(-35deg);
+  opacity: 0.6;
 }
 
 .page2_crab2 {
-    position: absolute;
-    max-block-size: 10%;
-    top: 90%;
-    left: 45%;
-    z-index: 21;
-    transform: rotate(35deg);
-    
-
-
+  position: absolute;
+  max-block-size: 10%;
+  top: 90%;
+  left: 45%;
+  z-index: 21;
+  transform: rotate(35deg);
 }
 
 .page2_pearl {
-    position: absolute;
-    max-block-size: 10%;
-    top: 87%;
-    left: 49%;
-    z-index: 19;
-    
-
-
+  position: absolute;
+  max-block-size: 10%;
+  top: 87%;
+  left: 49%;
+  z-index: 19;
 }
 
-
-
-/*animasjoner diver*/
-.page2_diver_img_animation{
-    position: absolute;
-    max-block-size: 10%;
-    top: 15%;
-    left: 20%;
-    z-index: 25;
-    transform: rotate(90deg)
-    }
-
-
-
-
+/*Animation for diver facing downwards*/
+.page2_diver_img_animation {
+  position: absolute;
+  max-block-size: 10%;
+  top: 15%;
+  left: 20%;
+  z-index: 25;
+  transform: rotate(90deg);
+}
 
 .page2_light_img_animation {
-    position: absolute;
-    max-block-size: 18%;
-    top: 33%;
-    left: 21%;
-    z-index: 25;
-    opacity: 0.5;
-    transform: rotate(360deg)
-    
-
-
+  position: absolute;
+  max-block-size: 18%;
+  top: 33%;
+  left: 21%;
+  z-index: 25;
+  opacity: 0.5;
+  transform: rotate(360deg);
 }
 
 .diver_animation {
-    position: relative;
-    top: -50%;
-    left: -20%;
-    animation: diveSwim 12s forwards;
-    z-index: 30;
-
-
+  position: relative;
+  top: -50%;
+  left: -20%;
+  animation: diveSwim 12s forwards;
 }
-
 
 @keyframes diveSwim {
-
-
-
-    100% {
-        
-       
-        left:20%;
-        top:10%;
-        transform:rotate(-45deg);
-    }
+  100% {
+    left: 20%;
+    top: 10%;
+    transform: rotate(-45deg);
+  }
 }
 
-
-
-
-
-/*animasjon for ubåt */
-.allpages_sub_passangers_img_animation {
-    position: absolute;
-    top:-50%;
-    left: 65%;
-    max-width: 40%;
-    max-height: 40%;
-    animation: moveDown 20s forwards 3s;
-    z-index: 100;
-    
+/*Animation for submarine, going downwards. Also depth-effect */
+.submarine {
+  position: absolute;
+  top: -50%;
+  left: 65%;
+  max-width: 40%;
+  max-height: 40%;
+  animation: moveDown 20s forwards 3s;
+  z-index: 100;
 }
 
+.submarine--animation {
+  animation: moveDown 20s forwards 3s;
+}
 
 @keyframes moveDown {
-    0% {
-        top: -25%;
-        transform: scale(0.3);
-        opacity: 0.4;
-    }
-    20% {
+  0% {
+    top: -25%;
+    transform: scale(0.3);
+    opacity: 0.4;
+  }
 
-        top: 10%;
-        transform: scale (0.6);
-        opacity:1;
+  20% {
+    top: 10%;
+    transform: scale (0.6);
+    opacity: 1;
+  }
 
-    }
+  50% {
+    top: 30%;
+    transform: scale(1);
+    opacity: 1;
+  }
 
-    50%
-    {
-        top: 30%;
-        transform: scale(1);
-        opacity: 1;
+  75% {
+    top: 30%;
+    transform: scale(1);
+    opacity: 1;
+  }
 
-    }
-    75% {
-        top: 30%;
-        transform: scale(1);
-        opacity:1;
-
-    }
-
-    100% {
-        top: 100%;
-        transform: scale(0.2);
-        opacity: 0.4;
-
-    }
+  100% {
+    top: 100%;
+    transform: scale(0.2);
+    opacity: 0.4;
+  }
 }
 
-
-/*Animation for weird fish 1 og 2*/
+/*Animation for weird fish 1 og 2. Going back and forth in the background*/
 
 .weird_fish {
-    position: absolute;
-    opacity: 0.4;
-    max-block-size: 10%;
-    left: 5%;
-    top: 60%;
-    animation: weirdSwim 10s linear infinite;
+  position: absolute;
+  opacity: 0.4;
+  max-block-size: 10%;
+  left: 5%;
+  top: 60%;
+}
 
+.weird_fish--animation {
+  animation: weirdSwim 10s linear infinite;
 }
 
 @keyframes weirdSwim {
+  0% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
 
-    0%{
-        transform: translate(0,0) rotateY(180deg);
+  50% {
+    transform: translate(200px, 0) rotateY(180deg);
+  }
 
-    }
-    50%{
-        transform: translate(200px,0) rotateY(180deg);
-    }
-    51%{
-            transform: translate(200px,0) rotateY(0deg);
+  51% {
+    transform: translate(200px, 0) rotateY(0deg);
+  }
 
-    }
-    100%{
-        transform: translate(0,0) rotateY(0deg);
+  100% {
+    transform: translate(0, 0) rotateY(0deg);
+  }
 
-    }
-/*Using px here for weirdSwim animations. No impact on sizing */
-
-
+  /*Using px here for weirdSwim animations. No impact on sizing */
 }
 
-
 .weird_fish2 {
-    position: absolute;
-    opacity: 0.7;
-    max-block-size: 10%;
-    right: 30%;
-    top: 55%;
-    animation: weirdSwim2 15s linear infinite;
+  position: absolute;
+  opacity: 0.7;
+  max-block-size: 10%;
+  right: 30%;
+  top: 55%;
+}
 
+.weird_fish--animation2 {
+  animation: weirdSwim2 15s linear infinite;
 }
 
 @keyframes weirdSwim2 {
+  0% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
 
-    0%{
-        transform: translate(0,0) rotateY(180deg);
+  50% {
+    transform: translate(350px, 0) rotateY(180deg);
+  }
 
-    }
-    50%{
-        transform: translate(350px,0) rotateY(180deg);
-    }
-    51%{
-            transform: translate(350px,0) rotateY(0deg);
+  51% {
+    transform: translate(350px, 0) rotateY(0deg);
+  }
 
-    }
-    100%{
-        transform: translate(0,0) rotateY(0deg);
-
-    }
-
-
-
+  100% {
+    transform: translate(0, 0) rotateY(0deg);
+  }
 }
 
-
-
-/*turtle animation*/
+/*turtle animation. Almost same animation as the last one */
 
 .page2_turtleBrah {
-    position: absolute;
-    opacity:0.3;
-    max-height: 13%;
-    transform:rotate(23deg);
-    right: 50%;
-    top: 40%;
-    animation: turtle 12s linear infinite;
-    z-index:2;
-   
-
+  position: absolute;
+  opacity: 0.3;
+  max-height: 13%;
+  right: 50%;
+  top: 40%;
+  animation: turtle 12s linear infinite;
+  z-index: 2;
 }
+
+.turtleBrah--animation {
+  animation: turtle 12s linear infinite;
+}
+
 @keyframes turtle {
+  0% {
+    transform: translate(0, 0) rotateY(180deg);
+  }
 
-    0%{
-        transform: translate(0,0) rotateY(180deg);
-        
-    }
-    50%{
-        transform: translate(-400px,0) rotateY(180deg);
-    }
-    51%{
-            transform: translate(-400px,0) rotateY(0deg);
+  50% {
+    transform: translate(-400px, 0) rotateY(180deg);
+  }
 
-    }
-    100%{
-        transform: translate(0,0) rotateY(0deg);
+  51% {
+    transform: translate(-400px, 0) rotateY(0deg);
+  }
 
-    }
+  100% {
+    transform: translate(0, 0) rotateY(0deg);
+  }
 
-/*also using px here. No impact on zoom */
-
-
-
+  /*also using px here. No impact on zoom */
 }
 
-
-/* stoned shark */
+/* stoned shark. Just going from left to right past the whole screen */
 
 .page2_stonedShark {
-    position: absolute;
-    max-height: 13%;
-    right: 50%;
-    top: 40%;
-    animation: stonedShark 20s linear forwards;
-    z-index:3;
+  position: absolute;
+  max-height: 13%;
+  right: 50%;
+  top: 40%;
+  z-index: 3;
+}
 
-
+.stonedShark--animation {
+  animation: stonedShark 20s linear forwards;
 }
 
 @keyframes stonedShark {
-    from {left:1%;}
-    to {left:150%;}
+  from {
+    left: -50%;
+  }
 
-
+  to {
+    left: 140%;
+  }
 }
 
-
-/* pearl blink animation */
+/* pearl blink animation. Simulating a shiny pearl */
 .page2_blink {
-    position: absolute;
-    max-block-size: 8%;
-    top: 89.5%;
-    left: 49%;
-    z-index: 30;
-
+  position: absolute;
+  max-block-size: 8%;
+  top: 89.5%;
+  left: 49%;
+  z-index: 30;
 }
-
 
 .blink--animation {
-
-    animation: blink 2s infinite;
-    
-
+  animation: blink 2s infinite;
 }
+
 @keyframes blink {
+  0% {
+    opacity: 1;
+  }
 
-    0% {
-        opacity:1;
-    }
+  25% {
+    opacity: 0;
+  }
 
-    25% {
-        opacity: 0;
-    }
+  50% {
+    opacity: 1;
+  }
 
-    50% {
-        opacity: 1;
+  75% {
+    opacity: 0;
+  }
 
-    }
-    75% {
-        opacity: 0;
-
-    }
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
-
-
+/*anchor animation. Two seperate pictures moving together simulating one picture*/
 .page2_anchor {
-    position: absolute;
-    max-block-size: 20%;
-    transform: rotate(-20deg);
-    top: 1%;
-    left: 16%;
-    z-index: 25;
-    animation: anchorMove 5s forwards 0.5s;
-    
+  position: absolute;
+  max-block-size: 20%;
+  transform: rotate(-20deg);
+  top: 1%;
+  left: 16%;
+  z-index: 25;
+}
+
+.anchor--animation {
+  animation: anchorMove 5s forwards 0.5s;
 }
 
 .page2_rope {
-    position: absolute;
-    transform:rotate(90deg);
-    width: 40%;
-    height: 2%;
-    top: -40%;
-    z-index: 25;
-    opacity: 0.7;
-    
-    animation: rope 5s forwards 0.5s;
+  position: absolute;
+  transform: rotate(90deg);
+  width: 40%;
+  height: 2%;
+  top: -40%;
+  z-index: 25;
+  opacity: 0.7;
 }
-/*anchor animation*/
+
+.rope--animation {
+  animation: rope 5s forwards 0.5s;
+}
+
 @keyframes rope {
-    
-    100% {
-        top: 30%;
-
-    }
+  100% {
+    top: 30%;
+  }
 }
-
 
 @keyframes anchorMove {
-   
-
-    100% {
-        top: 70%;
-
-    }
+  100% {
+    top: 70%;
+  }
 }
 
 /*octopus animation*/
 
 .page2_octopus {
-    position: absolute;
-    max-block-size: 20%;
-    left:48%;
-    top:50%;
-    z-index: 20;
-   
-
+  position: absolute;
+  max-block-size: 20%;
+  left: 48%;
+  top: 50%;
+  z-index: 20;
 }
 
 .octopus--animation {
-    animation: octopus 2s infinite;
-    
-
+  animation: octopus 2s infinite;
 }
 
 @keyframes octopus {
+  0% {
+    top: 52%;
+  }
 
-    0% {
-        top: 52%;
-    }
+  25% {
+    top: 50%;
+  }
 
-    25% {
-        top: 50%;
-    }
+  50% {
+    top: 52%;
+  }
 
-    50% {
-        top: 52%;
+  75% {
+    top: 50%;
+  }
 
-    }
-    75% {
-        top: 50%;
-
-    }
-    100% {
-        top: 52%;
-    }
+  100% {
+    top: 52%;
+  }
 }
 
-/*Octopus greets the visitors*/
+/*Octopus greets the visitors/speech bubble when submarine arrives*/
 .speechBubble {
-    font-size: 1.3vmax;
-    font-weight: bold;
-    max-width: 13%;
-    max-height: 22%;
-    text-align: center;
-    background: lightblue;
-    color:navy;
-    padding: 1vh 1vh 1vh 1vh;
-    position: absolute;
-    top: 50%;
-    left: 54%;
-    border-radius: 1vmax;
-    animation: speak 20s linear forwards  ;
-    z-index: 4;
+  font-size: 1.3vmax;
+  font-weight: bold;
+  max-width: 13%;
+  max-height: 22%;
+  text-align: center;
+  background: lightblue;
+  color: navy;
+  padding: 1vh 1vh 1vh 1vh;
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  border-radius: 1vmax;
 
+  z-index: 4;
+}
+
+.speechBubble--animation {
+  animation: speak 20s linear forwards;
 }
 
 @keyframes speak {
+  0% {
+    opacity: 0;
+  }
 
+  40% {
+    opacity: 0;
+  }
 
-        0% {
-            opacity:0;
-        }
+  50% {
+    opacity: 1;
+  }
 
-        40% {
+  75% {
+    opacity: 1;
+  }
 
-            opacity:0;
-        }
-        
-        50% {
+  90% {
+    opacity: 1;
+  }
 
-            opacity:1;
-        }
-
-
-        75% {
-
-            opacity:1;
-        }
-
-        90% {
-            opacity:1;
-        }
-
-        100% {
-            opacity:0;
-
-        }
-
+  100% {
+    opacity: 0;
+  }
 }
 
+/*surface boat on the waves simulating wavea. The rest of the animations do the same*/
 
-/*surface boat on the waves simulating waves*/
+.boat {
+  position: absolute;
+  max-block-size: 38%;
+  top: -30%;
+  left: 2%;
+}
 
 .boat--animation {
-    animation: boatWave 6s infinite;
-    
-
+  animation: boatWave 6s infinite;
 }
 
 @keyframes boatWave {
+  0% {
+    top: -30%;
+  }
 
-    0% {
-        top: -30%;;
-    }
+  25% {
+    top: -29%;
+  }
 
-    25% {
-        top: -29%;
-    }
+  50% {
+    top: -30%;
+  }
 
-    50% {
-        top: -30%;
+  75% {
+    top: -29%;
+  }
 
-    }
-    75% {
-        top: -29%;
-
-    }
-    100% {
-        top: -30%;
-    }
+  100% {
+    top: -30%;
+  }
 }
 
 .page2_flask {
-    top:-5%;
-    max-block-size: 15%;
-    transform:rotate(70deg);
-    position: absolute;
-    left: 50%;
-    opacity:0.7;
+  top: -5%;
+  max-block-size: 15%;
+  transform: rotate(70deg);
+  position: absolute;
+  left: 50%;
+  opacity: 0.7;
 }
 
 .flask--animation {
-
-    animation: flaskWave 5s infinite 
+  animation: flaskWave 5s infinite;
 }
 
-@keyframes flaskWave{
-    0% {
-        top: -5%;;
-    }
+@keyframes flaskWave {
+  0% {
+    top: -5%;
+  }
 
-    25% {
-        top: -4%;
-    }
+  25% {
+    top: -4%;
+  }
 
-    50% {
-        top: -5%;
+  50% {
+    top: -5%;
+  }
 
-    }
-    75% {
-        top: -4%;
+  75% {
+    top: -4%;
+  }
 
-    }
-    100% {
-        top: -5%;
-    }
-
+  100% {
+    top: -5%;
+  }
 }
-
 
 .page2_trash1 {
-
-    top:-5%;
-    max-block-size: 15%;
-    transform:rotate(40deg);
-    position: absolute;
-    right: 10%;
-    opacity: 0.6;
+  top: -5%;
+  max-block-size: 15%;
+  transform: rotate(40deg);
+  position: absolute;
+  right: 10%;
+  opacity: 0.6;
+  z-index: 1;
 }
 
 .trash--animation {
-
-    animation: trashWave 3s infinite 
+  animation: trashWave 3s infinite;
 }
 
-@keyframes trashWave{
-    0% {
-        top: -5%;;
-    }
+@keyframes trashWave {
+  0% {
+    top: -5%;
+  }
 
-    25% {
-        top: -4%;
-    }
+  25% {
+    top: -4%;
+  }
 
-    50% {
-        top: -5%;
+  50% {
+    top: -5%;
+  }
 
-    }
-    75% {
-        top: -4%;
+  75% {
+    top: -4%;
+  }
 
-    }
-    100% {
-        top: -5%;
-    }
-
+  100% {
+    top: -5%;
+  }
 }
+
 /*uses same trashWave animation here, but decreases duration for some inconsistensy between the two trashbags*/
 .page2_trash2 {
-    top:-5%;
-    max-block-size: 15%;
-    transform:rotate(-40deg);
-    position: absolute;
-    left: 10%;
-    z-index: 40;
-    animation: trashWave 2s infinite;
-    opacity:0.7;
-
+  top: -5%;
+  max-block-size: 15%;
+  transform: rotate(-40deg);
+  position: absolute;
+  left: 9%;
+  z-index: 1;
+  animation: trashWave 2s infinite;
+  opacity: 0.7;
 }
 
-
-
-/*Button for next page*/
-
+/*Button for next page. Blinking to catch users attention*/
 
 .button_nextPage {
-    text-align: center;
-    padding-top: 0.7vmax;
-    position: absolute;
-    border: 0.5vh solid white;
-    background: linear-gradient(0deg, rgb(0, 38, 77) 0%, rgb(51, 153, 255) 100%);
-    z-index:100;
-    max-width: 15%;
-    max-height: 10%;
-    left: 65%;
-    top: 85%;
-    border-radius: 1vmax;
-    color: white;
-    animation: buttonAnimation 1.3s  20s infinite forwards;
-    
-    
-
-
+  text-align: center;
+  padding-top: 0.7vmax;
+  position: absolute;
+  border: 0.5vh solid white;
+  background: linear-gradient(0deg, rgb(0, 38, 77) 0%, rgb(51, 153, 255) 100%);
+  z-index: 100;
+  max-width: 15%;
+  max-height: 10%;
+  left: 65%;
+  top: 85%;
+  border-radius: 1vmax;
+  color: white;
 }
 
+.button_nextPage--animation {
+  animation: buttonAnimation 1.3s 20s infinite forwards;
+}
 
 a:link {
-    color: white;
-   text-decoration: none;
-    
+  color: white;
+  text-decoration: none;
 }
-
 
 a:hover {
-    background: linear-gradient(0deg, red 0%, white 100%);
-   
-    
-    }
-
-
-a:visited {
-    color: white;
-    text-decoration: none;
+  background: linear-gradient(0deg, red 0%, white 100%);
 }
 
+a:visited {
+  color: white;
+  text-decoration: none;
+}
 
 @keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
 
-    
-    0% {
-        transform: scale(1);
-    }
+  25% {
+    transform: scale(0.85);
+  }
 
-    25% {
-        transform: scale(0.85);
-    }
-   
-    
-    50% {
+  50% {
+    transform: scale(1);
+  }
 
-       transform: scale(1);
-    }
+  75% {
+    transform: scale(0.85);
+  }
 
-
-    75% {
-
-        transform: scale(0.85);
-    }
-
-   
-
-    100% {
-        transform: scale(1);
-
-    }
-
+  100% {
+    transform: scale(1);
+  }
 }
