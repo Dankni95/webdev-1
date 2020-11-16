@@ -129,15 +129,10 @@ body {
   z-index: 1;
 }
 
+/* Bird animation from left to right */
 
 .bird1--animation {
   animation: bird1 30s infinite;
-}
-
-/* Bird animation from left to right */
-
-.bird2--animation {
-  animation: bird2 30s infinite;
 }
 
 @keyframes bird1 {
@@ -146,11 +141,15 @@ body {
   }
 
   100% {
-    left: 120%;
+    left: 150%;
   }
 }
 
 /* Second bird animation from rigth to left */
+
+.bird2--animation {
+  animation: bird2 30s infinite;
+}
 
 @keyframes bird2 {
   0% {
@@ -158,7 +157,7 @@ body {
   }
 
   100% {
-    left: -50%;
+    left: -100%;
   }
 }
 
@@ -200,21 +199,20 @@ body {
 .speechBubble {
   font-size: 1vmax;
   font-weight: normal;
-  max-width: 30%;
-  max-height: 15%;
+  max-width: 20%;
+  max-height: 16%;
   text-align: center;
   background: rgba(198, 167, 167, 0.311);
   color: black;
-  line-height: 300%;
+  line-height: 250%;
   position: absolute;
   top: 48%;
   left: 10%;
-  border-radius: 10%;
+  border-radius: 1vmax;
   animation: speak 20s linear forwards  ;
   z-index: 4;
   border: 0.5vh solid black;
-  
-  
+  padding: 1% 1% 1% 1%;
 
 }
 
