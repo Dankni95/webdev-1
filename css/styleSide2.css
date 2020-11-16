@@ -2,11 +2,9 @@
 
 body {
   background: rgb(14, 9, 107);
-  background: linear-gradient(
-    0deg,
-    rgba(14, 9, 107, 0.9420810560552346) 5%,
-    rgba(34, 172, 201, 0.9476832969515931) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(14, 9, 107, 0.9420810560552346) 5%,
+      rgba(34, 172, 201, 0.9476832969515931) 100%);
 }
 
 .sand {
@@ -42,6 +40,15 @@ body {
   z-index: 20;
 }
 
+.page2_pearl {
+  position: absolute;
+  max-block-size: 10%;
+  top: 87%;
+  left: 49%;
+  z-index: 19;
+}
+
+/*crab animation slowly*/
 .page2_crab {
   position: absolute;
   max-block-size: 10%;
@@ -50,6 +57,7 @@ body {
   z-index: 1;
   transform: rotate(-35deg);
   opacity: 0.6;
+  animation: crabMove 2s infinite;
 }
 
 .page2_crab2 {
@@ -59,15 +67,27 @@ body {
   left: 45%;
   z-index: 21;
   transform: rotate(35deg);
+  animation: crabMove 2s infinite;
+
 }
 
-.page2_pearl {
-  position: absolute;
-  max-block-size: 10%;
-  top: 87%;
-  left: 49%;
-  z-index: 19;
+@keyframes crabMove {
+
+  0% {
+
+    transform: rotate(0deg);
+  }
+
+  50% {
+
+    transform: rotate(4deg)
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
+
 
 /*Animation for diver facing downwards*/
 .page2_diver_img_animation {
