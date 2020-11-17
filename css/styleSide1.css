@@ -1,4 +1,4 @@
-/* Dette er stylesheet for side 1 */
+/* Stylesheet for page 1 */
 
 body {
   background: rgb(2, 0, 36);
@@ -25,6 +25,8 @@ body {
   left: -1%;
   z-index: -1;
 }
+
+/* Sun pulsating/ "shining" animation */
 
 .sun--animation {
   animation: sun 4s infinite ease-in-out backwards;
@@ -233,6 +235,8 @@ body {
 
 }
 
+/* Submarine animation from the pier and down to the unkown */
+
 .submarine__image--animation {
   animation: submarine 10s ease 17s;
 }
@@ -250,6 +254,8 @@ body {
     left: 60%;
   }
 }
+
+/* Small boats in the background animation */
 
 .pirateship--animation {
   animation: pirateship 8s ease-in infinite;
@@ -329,7 +335,7 @@ body {
   }
 }
 
-/* boat placeholder with geir og geirine */
+/* Boat placeholder with geir og geirine */
 
 .boat {
   position: absolute;
@@ -611,6 +617,8 @@ body {
   transform: rotateY(40deg);
   opacity: 0;
 }
+
+/* Dropping anchor animation */
 
 @keyframes anchor {
   0% {
