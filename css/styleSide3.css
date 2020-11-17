@@ -109,7 +109,7 @@ body {
 }
 
 @keyframes explosion {
- 
+
     50% {
         opacity: 1;
     }
@@ -236,40 +236,41 @@ body {
     }
 
 }
-        /* missile animation hiding behind sub and reusing push animation to hide */
 
-        .missile__image--animation{
-            animation: hideMissile 8.5s linear, push 1ms ease 16s forwards;
-        
-        }
-        
-        /* hiding missile behind sub with animation because i cant use opacity.. */
-        
-        @keyframes hideMissile {
-            0% {
-                top: -45%;
-                width: 1%;
-                height: 17%;
-        
-            }
-        
-        
-            50% {
-                top: 45%;
-                left: 54%;
-        
-            }
-        
-        
-            100% {
-                top: 30%;
-                left: 72%;
-        
-            }
-            
-        }
-        
-        
+/* missile animation hiding behind sub and reusing push animation to hide */
+
+.missile__image--animation {
+    animation: hideMissile 8.5s linear, push 1ms ease 16s forwards;
+
+}
+
+/* hiding missile behind sub with animation because i cant use opacity.. */
+
+@keyframes hideMissile {
+    0% {
+        top: -45%;
+        width: 1%;
+        height: 17%;
+
+    }
+
+
+    50% {
+        top: 45%;
+        left: 54%;
+
+    }
+
+
+    100% {
+        top: 30%;
+        left: 72%;
+
+    }
+
+}
+
+
 
 /* hiding checkbox button placeholder */
 
@@ -286,7 +287,7 @@ body {
     font-size: 25%;
     font-size: 1vmax;
     color: whitesmoke;
-    line-height:170%;
+    line-height: 170%;
     text-align: center;
     border: 0.5vh solid blueviolet;
     width: 8%;
@@ -299,7 +300,7 @@ body {
 
 }
 
-        /* hiding button after 10s visibility  */
+/* hiding button after 10s visibility  */
 
 
 @keyframes hideBtn {
@@ -308,9 +309,10 @@ body {
         opacity: 1;
         cursor: pointer;
 
-    
+
 
     }
+
     99% {
 
         opacity: 1;
