@@ -10,6 +10,7 @@ body {
 /* To make the site responsive to screen size, height and width had to be
 specified for the background elements (ruins__img, cliffLeft__img, .cliffRight__img)
 despite not having their size altered */
+
 .ruins__img {
 	position: absolute;
 	z-index: 5;
@@ -50,7 +51,8 @@ despite not having their size altered */
 }
 
 
-/*Animation for blinking eyes */
+/* Animation for blinking eyes */
+
 .eyes--animation {
 	animation-name: blinking;
 	animation-duration: 3s;
@@ -84,7 +86,7 @@ despite not having their size altered */
 	transform: rotate(75deg);
 }
 
-/*Shipwreck anmation */
+/* Shipwreck anmation */
 
 .shipwreck--animation {
 	animation-delay: 2s;
@@ -93,7 +95,7 @@ despite not having their size altered */
 	animation-iteration-count: 1;
 }
 
-.shipwreck_trail__img {
+.shipwreckTrail__img {
 	position: absolute;
 	z-index: 3;
 	height: 7%;
@@ -113,6 +115,7 @@ despite not having their size altered */
 }
 
 /* Separate animations for the trail and shipwreck to practice timing animations with each other. */
+
 @keyframes sinking {
 	100% {
 		top: 60%;
@@ -125,7 +128,7 @@ despite not having their size altered */
 	}
 }
 
-/*Monster position */
+/* Monster position */
 
 .monster__img {
 	position: absolute;
@@ -137,7 +140,7 @@ despite not having their size altered */
 	left: -7%;
 }
 
-/*Monster peek-a-boo animation */
+/* Monster peekaboo animation */
 
 .monster--animation {
 	animation-delay: 7s;
@@ -164,7 +167,8 @@ despite not having their size altered */
 }
 
 
-/*Submarine and attached magnet placements*/
+/* Submarine, searchlight and attached magnet placements */
+
 .submarine__img {
 	position: absolute;
 	height: 15%;
@@ -193,7 +197,8 @@ despite not having their size altered */
 	left: 0.7%;
 	top: 1.7%;
 }
-/*Treasure chest which is picked up by submarine */
+/* Treasure chest which is picked up by submarine */
+
 .treasure1__img {
 	position: absolute;
 	height: 17%;
@@ -211,6 +216,7 @@ despite not having their size altered */
 }
 
 /* Chest is always carried by the sub, but kept hidden until "picked up" */
+
 @keyframes first_chest_trick {
 	0% {
 		opacity: 0;
@@ -225,7 +231,8 @@ despite not having their size altered */
 	}
 }
 
-/*div with submarine, light, treasure chest and magnet */
+/* div with submarine, light, treasure chest and magnet */
+
 .submarine__div {
 	position: absolute;
 	z-index: 6;
@@ -277,6 +284,7 @@ despite not having their size altered */
 }
 
 /* When the chest gets "picked up", it stays but turns invisible */
+
 @keyframes second_chest_trick {
 	0% {
 		opacity: 1;
