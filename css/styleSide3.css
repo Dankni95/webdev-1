@@ -5,16 +5,16 @@ body {
 	margin: 0;
     padding: 0;
 }
-.wrapBackground__div{
-	position: relative;
-	width: 100%;
-	height: 100vh;
-}
 
-/*Positioning */
+
+/* To make the site responsive to screen size, height and width had to be
+specified for the background elements (ruins__img, cliffLeft__img, .cliffRight__img)
+despite not having their size altered */
 .ruins__img {
 	position: absolute;
 	z-index: 5;
+	width: 100%;
+	height: 100%;
 	right: 0%;
 	bottom: -3%;
 }
@@ -22,6 +22,8 @@ body {
 .cliffLeft__img {
 	position: absolute;
 	z-index: 6;
+	width: 100%;
+	height: 100%;
 	left: 0%;
 	bottom: 0%
 }
@@ -29,6 +31,8 @@ body {
 .cliffRight__img {
 	position: absolute;
 	z-index: 4;
+	width: 100%;
+	height: 100%;
 	transform: scaleX(-1);
 	bottom: -20%;
 	right: 5%;
@@ -39,7 +43,7 @@ body {
 	z-index: 5;
 	height: 4%;
 	width: 4%;
-	right: 18%;
+	right: 20%;
 	bottom: 12%;
 	transform: rotate(-10deg);
 
@@ -240,12 +244,12 @@ body {
 
 @keyframes treasureDive {
 	48% {
-		top: 65%;
+		top: 67%;
 		left: 53%;
 	}
 
 	52% {
-		top: 65%;
+		top: 67%;
 		left: 53%;
 	}
 
@@ -261,7 +265,7 @@ body {
 	width: 17%;
 	opacity: 0;
 	z-index: 7;
-	bottom: 5%;
+	bottom: 3%;
 	right: 26%;
 }
 
