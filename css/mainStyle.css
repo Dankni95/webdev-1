@@ -16,10 +16,9 @@ Stylesheet for all pages, here changes go over all pages.
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 0;
     top: 0;
     left: 0;
-    
+    z-index: 10;   
 }
 
 .bubbles__div {
@@ -31,9 +30,6 @@ Stylesheet for all pages, here changes go over all pages.
     height: 40px;
     border-radius: 50%;
     background: radial-gradient(whitesmoke, transparent);
-
-
-
 }
 
 .bubbles__div:nth-child(1) {
@@ -78,8 +74,6 @@ Stylesheet for all pages, here changes go over all pages.
     left: 62%;
     opacity: 0.3;
     animation: bubble 32s ease-in-out alternate infinite;
-    
-
 }
 
 .bubbles__div:nth-child(6) {
@@ -93,29 +87,50 @@ Stylesheet for all pages, here changes go over all pages.
 
 .bubbles__div--animation {
     animation: bubble 10s ease-in alternate-reverse infinite;
-
 }
 
 @keyframes bubble {
     0% {
-        
         bottom: 100px;
         transform: translateX(100px);
     }
 
     50% {
         bottom: 200px;
-        
-         
     }
 
     100% {
         bottom: 250px;
         transform: translateY(-190px);
         top: -100px;
-        opacity: 0.4;
-        
+        opacity: 0.4;        
     }
 }
 
 
+
+.nextBtn__image {
+    position: absolute;
+    top: 85%;
+    left: 93%;
+    max-block-size: 8%;
+    filter: invert(1);
+    opacity: 0;
+}
+
+
+@keyframes nextBtn {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+        left: 95%;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
