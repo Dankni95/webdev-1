@@ -1,4 +1,4 @@
-/* Stylesheet for page 1 */
+/* Stylesheet for index */
 
 body {
   background: rgb(2, 0, 36);
@@ -235,7 +235,7 @@ body {
 
 }
 
-/* Submarine animation from the pier and down to the unkown */
+/* Submarine animation from the pier and down */
 
 .submarine__image--animation {
   animation: submarine 10s ease 17s;
@@ -395,7 +395,7 @@ body {
 
 }
 
-
+/*Animation for Geir and Geirine walking out of the boat*/
 .geir__image--animation {
   animation: ontoPlatformGeir 5s linear 7s forwards;
 }
@@ -478,7 +478,7 @@ body {
   }
 
 }
-
+/*Hatch opening on top of submarine */
 .hatch__image {
   position: absolute;
   max-block-size: 35%;
@@ -532,7 +532,7 @@ body {
   display: none;
 }
 
-/* label button */
+/* Button for dropping anchor */
 
 .desc__toggle {
   position: absolute;

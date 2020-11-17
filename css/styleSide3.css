@@ -1,9 +1,11 @@
-/* This is the stylesheet for page 4 */
+/* This is the stylesheet for page 3 */
 body {
 	background: rgb(2, 0, 36);
 	background: linear-gradient(0deg, rgba(2, 0, 36, 0.9420810560552346) 40%, rgba(26, 128, 150, 0.9476832969515931) 100%);
 }
 
+
+/*Positioning */
 .ruins__img {
 	position: absolute;
 	z-index: 5;
@@ -37,6 +39,8 @@ body {
 
 }
 
+
+/*Animation for blinking eyes */
 .eyes--animation {
 	animation-name: blinking;
 	animation-duration: 3s;
@@ -57,6 +61,8 @@ body {
 	}
 }
 
+/*Shipwreck position*/
+
 .shipwreck__img {
 	position: absolute;
 	z-index: 4;
@@ -67,6 +73,8 @@ body {
 	opacity: 0.5;
 	transform: rotate(75deg);
 }
+
+/*Shipwreck anmation */
 
 .shipwreck--animation {
 	animation-delay: 2s;
@@ -107,6 +115,8 @@ body {
 	}
 }
 
+/*Monster position */
+
 .monster__img {
 	position: absolute;
 	z-index: 5;
@@ -116,6 +126,8 @@ body {
 	top: 27%;
 	left: -7%;
 }
+
+/*Monster peek-a-boo animation */
 
 .monster--animation {
 	animation-delay: 7s;
@@ -141,6 +153,8 @@ body {
 	}
 }
 
+
+/*Submarine and attached magnet placements*/
 .submarine__img {
 	position: absolute;
 	height: 15%;
@@ -169,7 +183,7 @@ body {
 	left: 0.7%;
 	top: 1.7%;
 }
-
+/*Treasure chest which is picked up by submarine */
 .treasure1__img {
 	position: absolute;
 	height: 17%;
@@ -201,6 +215,7 @@ body {
 	}
 }
 
+/*div with submarine, light, treasure chest and magnet */
 .submarine__div {
 	position: absolute;
 	z-index: 6;

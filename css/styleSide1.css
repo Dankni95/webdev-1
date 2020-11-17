@@ -1,7 +1,7 @@
-/* Dette er stylesheet for side 2 */
+/* This is stylesheet for page 1 */
 
 
-/*Static images. Only use for placements here*/
+/*Static images. No animation on following elements.*/
 body {
   background: rgb(14, 9, 107);
   background: linear-gradient(0deg,
@@ -219,7 +219,7 @@ body {
     transform: translate(0, 0) rotateY(0deg);
   }
 
-  /*Using px here for weirdSwim animations. No impact on sizing */
+  /*Using px here for weirdSwim animations. No impact on sizing/scaling */
 }
 
 .weirdFish2__img {
@@ -477,7 +477,7 @@ body {
   }
 }
 
-/*surface boat on the waves simulating wavea. The rest of the animations do the same*/
+/*surface boat on the waves simulating waves.  Flask and trash animation doing the same*/
 
 .boat__img {
   position: absolute;
