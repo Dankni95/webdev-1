@@ -25,8 +25,9 @@ body {
 
 .rev__img {
     position: absolute;
-    max-block-size: 20%;
-    top: -10%;
+    width: 20%;
+    height: 25%;
+    top: -20%;
     left: 89%;
     animation: waterEffect 7s linear alternate infinite;
 }
@@ -108,8 +109,7 @@ body {
 }
 
 @keyframes explosion {
-    0% {}
-
+ 
     50% {
         opacity: 1;
     }
