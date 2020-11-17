@@ -174,9 +174,6 @@ body {
 @keyframes waterEffect {
     0% {
         height: 48%;
-
-
-
     }
 
     50% {
@@ -231,8 +228,6 @@ body {
 
     100% {
         top: 100%;
-
-
     }
 
 }
