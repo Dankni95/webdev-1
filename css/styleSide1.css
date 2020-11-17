@@ -367,11 +367,10 @@ body {
 
 .rope__img {
   position: absolute;
-  transform: rotate(90deg);
-  max-width: 40%;
-  max-height: 2%;
-  left: 0%;
-  top: -40%;
+  max-width: 100%;
+  max-height: 100%;
+  top: -99%;
+  left: 19.5%;
   z-index: 25;
   opacity: 0.7;
 }
@@ -382,7 +381,7 @@ body {
 
 @keyframes rope {
   100% {
-    top: 30%;
+    top: -30%;
   }
 }
 
