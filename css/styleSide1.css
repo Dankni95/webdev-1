@@ -431,7 +431,7 @@ body {
 
 /*Octopus greets the visitors/speech bubble when submarine arrives*/
 .speechBubble {
-  font-size: 1.3vmax;
+  font-size: 1vmax;
   font-weight: bold;
   max-width: 13%;
   max-height: 30%;
