@@ -456,5 +456,5 @@ body {
 
 /* next button animation in mainStyle.css */
 .nextBtn__image--animation {
-    animation: nextBtn 1s ease infinite 40s;
+    animation: nextBtn 1s ease infinite 20s;
 }
