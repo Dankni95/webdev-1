@@ -357,7 +357,7 @@ body {
   max-height: 20%;
   transform: rotate(-20deg);
   top: 0%;
-  left: 15.5%;
+  left: 15%;
   z-index: 25;
 }
 
@@ -368,9 +368,9 @@ body {
 .rope__img {
   position: absolute;
   transform: rotate(90deg);
-  width: 36%;
-  height: 2%;
-  left: 2%;
+  max-width: 40%;
+  max-height: 2%;
+  left: 0%;
   top: -40%;
   z-index: 25;
   opacity: 0.7;
