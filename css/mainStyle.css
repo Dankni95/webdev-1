@@ -109,11 +109,13 @@ Stylesheet for all pages, here changes go over all pages.
 
 .nextBtn__image {
     position: absolute;
-    top: 85%;
-    left: 93%;
-    max-block-size: 8%;
+    top: 89%;
+    left: 94%;
+   width: 4%;
+   height: 6%;
     filter: invert(1);
     opacity: 0;
+    z-index: 11;
 }
 
 .nextBtn__image:hover {

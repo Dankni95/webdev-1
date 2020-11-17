@@ -1,460 +1,301 @@
-/* Dette er stylesheet for side 3 */
-
+/* This is the stylesheet for page 4 */
 body {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(19, 45, 85, 1) 0%, rgba(19, 115, 135, 1) 100%);
+	background: rgb(2, 0, 36);
+	background: linear-gradient(0deg, rgba(2, 0, 36, 0.9420810560552346) 40%, rgba(26, 128, 150, 0.9476832969515931) 100%);
 }
 
-/* positioning placeholder */
+.ruins__img {
+	position: absolute;
+	z-index: 5;
+	right: -5%;
+	bottom: 0%;
+}
 
-.sand__img {
-    position: absolute;
-    width: 45%;
-    height: 20%;
-    top: -12%;
-    left: 0%;
+.cliff_left__img {
+	position: absolute;
+	z-index: 6;
+	left: 0%;
+	bottom: 0%
+}
+
+.cliff_right__img {
+	position: absolute;
+	z-index: 4;
+	transform: scaleX(-1);
+	bottom: -20%;
+	right: 5%;
+}
+
+.eyes__img {
+	position: absolute;
+	z-index: 5;
+	height: 4%;
+	width: 4%;
+	right: 16%;
+	bottom: 14%;
+	transform: rotate(-10deg);
 
 }
 
-.sand__img--rotate {
-    transform: rotate(175deg);
+.eyes--animation {
+	animation-name: blinking;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes blinking {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.shipwreck__img {
+	position: absolute;
+	z-index: 4;
+	height: 12%;
+	width: 7%;
+	top: -17%;
+	left: 18%;
+	opacity: 0.5;
+	transform: rotate(75deg);
+}
+
+.shipwreck--animation {
+	animation-delay: 2s;
+	animation-name: sinking;
+	animation-duration: 11s;
+	animation-iteration-count: 1;
+}
+
+.shipwreck_trail__img {
+	position: absolute;
+	z-index: 3;
+	height: 7%;
+	width: 7%;
+	top: -25%;
+	left: 17%;
+	opacity: 0.7;
+	transform: rotate(95deg);
 
 }
 
-/* plant positioning and water effect */
-
-.rev__img {
-    position: absolute;
-    width: 20%;
-    height: 25%;
-    top: -20%;
-    left: 89%;
-    animation: waterEffect 7s linear alternate infinite;
+.shipwreck_trail--animation {
+	animation-delay: 2s;
+	animation-name: sinkingTrail;
+	animation-duration: 11s;
+	animation-iteration-count: 1;
 }
 
-.rev_img--rotate {
-    transform: rotate(255deg);
+/* Separate animations for the trail and shipwreck to practice timing animations with each other. */
+@keyframes sinking {
+	100% {
+		top: 60%;
+	}
+}
 
+@keyframes sinkingTrail {
+	100% {
+		top: 55%
+	}
 }
 
 .monster__img {
-    position: absolute;
-    width: 35%;
-    height: 45%;
-    top: 35%;
-    left: 2%;
-    transform: scaleX(-1);
-    z-index: 4;
-
+	position: absolute;
+	z-index: 5;
+	transform: scaleX(-1);
+	height: 20%;
+	width: 20%;
+	top: 27%;
+	left: -7%;
 }
 
-
-
-.sub__image {
-    position: absolute;
-    width: 40%;
-    height: 40%;
-    top: 25%;
-    left: 60%;
+.monster--animation {
+	animation-delay: 7s;
+	animation-name: peekaboo;
+	animation-duration: 8s;
+	animation-iteration-count: 1;
 }
 
-.explosion__image {
-    position: absolute;
-    width: 35%;
-    height: 45%;
-    top: 15%;
-    left: 2%;
-    opacity: 0;
-    transform: scale(1);
-    z-index: -1;
+@keyframes peekaboo {
+	0% {
+		left: -7%;
+		top: 27%;
+	}
 
+	50% {
+		left: 2.5%;
+		top: 22%;
+	}
+
+	100% {
+		left: -7%;
+		top: 27%;
+	}
 }
 
-
-
-.missile__image {
-    position: absolute;
-    width: 4%;
-    height: 47%;
-    top: 34%;
-    transform: rotate(270deg);
-    z-index: -1;
+.submarine__img {
+	position: absolute;
+	height: 15%;
+	width: 15%;
+	z-index: 7;
+	left: 7%;
+	top: 0%;
 }
 
-
-
-
-.missile__image {
-    left: 75%;
-    transition: 550ms all ease-in;
-    opacity: 1;
-
+.magnet__img {
+	position: absolute;
+	height: 8%;
+	width: 5%;
+	z-index: 6;
+	left: 11%;
+	top: 13%;
 }
 
-
-/*  checkbox toggling placeholder  */
-
-/* checkbox for missile animation  */
-
-#toggle-1:checked~.missile__image {
-    left: 35%;
-    opacity: 0;
-
+.searchlight__img {
+	position: absolute;
+	height: 18%;
+	width: 6%;
+	opacity: 0.7;
+	z-index: 7;
+	transform: rotate(90deg);
+	left: 0.7%;
+	top: 1.7%;
 }
 
-/* checkbox for explosion animation  */
-
-#toggle-1:checked~.explosion__image {
-    animation: explosion 1s ease-in-out forwards;
+.treasure1__img {
+	position: absolute;
+	height: 17%;
+	width: 17%;
+	z-index: 7;
+	left: 4%;
+	top: 12.5%;
 }
 
-@keyframes explosion {
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1.5);
-
-    }
-
+.treasure1--animation {
+	animation-name: first_chest_trick;
+	animation-delay: 0s;
+	animation-duration: 20s;
+	animation-iteration-count: 1;
 }
 
-/* animation placeholder */
+/* Chest is always carried by the sub, but kept hidden until "picked up" */
+@keyframes first_chest_trick {
+	0% {
+		opacity: 0;
+	}
 
+	49% {
+		opacity: 0;
+	}
 
-
-/* rocket pushes out monster animation */
-#toggle-1:checked~.monster__img {
-
-    animation: push 900ms linear 100ms forwards;
+	50% {
+		opacity: 1;
+	}
 }
 
-
-@keyframes push {
-    0% {
-        opacity: 1;
-
-
-    }
-
-
-    50% {
-        left: -150%;
-        transform: rotate(345deg);
-
-    }
-
-
-    100% {
-        left: -150%;
-
-    }
-
+.submarine__div {
+	position: absolute;
+	z-index: 6;
+	height: 100%;
+	width: 100%;
+	left: 80%;
+	top: -25%;
 }
 
-/* monster movement in water animation */
-
-.monster__img--animation {
-    animation: waterEffect 3s ease-in-out 1ms alternate infinite;
-
-
+.submarine_dive--animation {
+	animation-name: treasureDive;
+	animation-delay: 0s;
+	animation-duration: 20s;
+	animation-iteration-count: 1;
 }
 
-/* water effect // and sub entry/exit */
+@keyframes treasureDive {
+	48% {
+		top: 65%;
+		left: 53%;
+	}
 
-.sub__image--animation {
-    animation: waterEffect 7s linear alternate infinite, subEntry 10s, subExit 9s ease 18s forwards;
+	52% {
+		top: 65%;
+		left: 53%;
+	}
 
+	100% {
+		top: -25%;
+		left: 30%;
+	}
 }
 
-
-
-@keyframes waterEffect {
-    0% {
-        height: 48%;
-    }
-
-    50% {
-
-        height: 45%;
-        padding-left: 10px;
-
-
-
-    }
-
-    100% {
-        height: 43%;
-    }
-
+.treasure2__img {
+	position: absolute;
+	height: 17%;
+	width: 17%;
+	opacity: 0;
+	z-index: 7;
+	bottom: 5%;
+	right: 26%;
 }
 
-@keyframes subEntry {
-    0% {
-        opacity: 1;
-        top: -80%;
-
-
-    }
-
-
-    50% {
-        opacity: 1;
-        top: 25%;
-        left: 40%;
-
-    }
-
-
-    100% {
-        top: 25%;
-        left: 60%;
-        opacity: 1;
-
-    }
-
+.treasure2--animation {
+	animation: second_chest_trick;
+	animation-delay: 0s;
+	animation-duration: 20s;
+	animation-iteration-count: 1;
 }
 
-@keyframes subExit {
-    0% {
-        top: 25%;
-        left: 60%;
+/* When the chest gets "picked up", it stays but turns invisible */
+@keyframes second_chest_trick {
+	0% {
+		opacity: 1;
+	}
 
-    }
+	49% {
+		opacity: 1
+	}
 
-
-
-    100% {
-        top: 100%;
-    }
-
+	50% {
+		opacity: 0;
+	}
 }
 
-/* missile animation hiding behind sub and reusing push animation to hide */
-
-.missile__image--animation {
-    animation: hideMissile 8.5s linear, push 1ms ease 16s forwards;
-
+.success__img {
+	position: absolute;
+	height: 35%;
+	width: 35%;
+	opacity: 0;
+	z-index: 10;
+	left: 35%;
+	top: 30%;
 }
 
-/* hiding missile behind sub with animation because i cant use opacity.. */
-
-@keyframes hideMissile {
-    0% {
-        top: -45%;
-        width: 1%;
-        height: 17%;
-
-    }
-
-
-    50% {
-        top: 45%;
-        left: 54%;
-
-    }
-
-
-    100% {
-        top: 30%;
-        left: 72%;
-
-    }
-
+.success--animation {
+	animation: missionpassed;
+	animation-delay: 20s;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
 }
 
+@keyframes missionpassed {
+	0% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
 
+	50% {
+		opacity: 1;
+		transform: scale(0.9);
+	}
 
-/* hiding checkbox button placeholder */
-
-
-/* hiding the toggle checkbox */
-#toggle-1 {
-    display: none;
-}
-
-/* label button */
-
-.desc__label {
-    position: absolute;
-    font-size: 25%;
-    font-size: 1vmax;
-    color: whitesmoke;
-    line-height: 170%;
-    text-align: center;
-    border: 0.5vh solid blueviolet;
-    width: 8%;
-    height: 5%;
-    top: 68%;
-    left: 59%;
-    z-index: 1;
-    opacity: 0;
-    animation: hideBtn 10s ease-out 7s forwards;
-
-}
-
-/* hiding button after 10s visibility  */
-
-
-@keyframes hideBtn {
-    0% {
-
-        opacity: 1;
-        cursor: pointer;
-
-
-
-    }
-
-    99% {
-
-        opacity: 1;
-        cursor: pointer;
-
-    }
-
-    100% {
-
-        opacity: 0;
-        cursor: default;
-
-    }
-}
-
-/* after one click hide the button */
-
-#toggle-1:checked~.desc__label {
-    display: none;
-
-}
-
-
-
-/* fishes placeholder */
-.fish {
-    z-index: -1;
-}
-
-.fish1__image {
-    position: absolute;
-    width: 3%;
-    height: 2%;
-    top: 67%;
-    left: 59%;
-    animation: fishes 50s ease-in alternate infinite;
-
-}
-
-.fish2__image {
-    position: absolute;
-    width: 5%;
-    height: 3%;
-    top: 77%;
-    left: 59%;
-    animation: fishes 29s ease-in alternate infinite;
-
-}
-
-.fish3__image {
-    position: absolute;
-    width: 5%;
-    height: 4%;
-    top: 57%;
-    left: 49%;
-    animation: fishes 26s ease-in normal infinite;
-
-}
-
-.fish4__image {
-    position: absolute;
-    width: 7%;
-    height: 5%;
-    top: 199%;
-    left: 129%;
-    animation: fishes 50s ease-in-out 5s infinite;
-}
-
-/* reused minifishes from fish 1 */
-
-.minifishes__div img {
-    z-index: -1;
-    width: 1%;
-    height: 1%;
-}
-
-/* positioning  */
-
-.fish1_1__image {
-    position: absolute;
-    top: 37%;
-    left: 49%;
-    transform: scaleX(-1);
-    animation: fishes 29s ease-in 1s alternate infinite;
-
-}
-
-.fish1_2__image {
-    position: absolute;
-    top: 17%;
-    left: 79%;
-    animation: fishes 27s ease-in normal infinite;
-
-}
-
-.fish1_3__image {
-    position: absolute;
-    top: 97%;
-    left: 39%;
-    transform: scaleX(-1);
-    animation: fishes 25s ease-in alternate-reverse infinite;
-
-}
-
-.fish1_4__image {
-    position: absolute;
-    top: 87%;
-    left: 89%;
-    animation: fishes 15s ease-in 500ms alternate-reverse infinite;
-
-}
-
-.fish1_5__image {
-    position: absolute;
-    top: 37%;
-    left: 19%;
-    transform: scaleX(-1);
-    animation: fishes 17s ease-in alternate-reverse infinite;
-
-}
-
-
-
-/* fishes movement and water effect */
-
-@keyframes fishes {
-    0% {
-        top: 100%;
-        transform: translateX(420%);
-    }
-
-    50% {
-        left: 35%;
-        top: 78%;
-
-
-    }
-
-    100% {
-        left: -100%;
-        transform: translateY(-700%);
-        opacity: 0.4;
-
-    }
-}
-
-/* next button animation in mainStyle.css */
-.nextBtn__image--animation {
-    animation: nextBtn 1s ease 20s infinite;
+	100% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
 }
