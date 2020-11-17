@@ -198,13 +198,12 @@ body {
 
 .speechBubble {
   font-size: 1vmax;
-  font-weight: normal;
-  max-width: 20%;
-  max-height: 16%;
+  width: 20%;
+  height: 16%;
   text-align: center;
   background: rgba(198, 167, 167, 0.311);
   color: black;
-  line-height: 250%;
+  line-height: 200%;
   position: absolute;
   top: 48%;
   left: 10%;
@@ -212,7 +211,7 @@ body {
   animation: speak 20s linear forwards;
   z-index: 4;
   border: 0.5vh solid black;
-  padding: 1% 1% 1% 1%;
+  
 
 }
 
@@ -242,7 +241,6 @@ body {
 }
 
 @keyframes submarine {
-  0% {}
 
   50% {
     top: 67%;
