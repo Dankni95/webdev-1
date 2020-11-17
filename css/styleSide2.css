@@ -21,7 +21,8 @@ body {
 
 .sandcastle__img {
   position: absolute;
-  max-block-size: 18%;
+  max-width: 18%;
+  max-height:18%;
   top: 80%;
   left: 20%;
   z-index: 26;
@@ -29,7 +30,9 @@ body {
 
 .coral_red__img {
   position: absolute;
-  max-block-size: 50%;
+  
+  max-width:50% ;
+  max-height:50% ; 
   left: 85%;
   top: 75%;
 }
@@ -37,7 +40,9 @@ body {
 
 .coral_color__img {
   position: absolute;
-  max-block-size: 30%;
+  
+  max-width: 30%;
+  max-height: 30%; 
   top: 75%;
   left: -5%;
   z-index: 20;
@@ -45,7 +50,9 @@ body {
 
 .pearl__img {
   position: absolute;
-  max-block-size: 10%;
+  
+  max-width: 10%;
+  max-height: 10%; 
   top: 87%;
   left: 49%;
   z-index: 19;
@@ -54,7 +61,8 @@ body {
 /*crab animation slowly*/
 .crab__img {
   position: absolute;
-  max-block-size: 10%;
+  max-width: 10%;
+  max-height: 10%; 
   top: 90%;
   left: 52%;
   z-index: 1;
@@ -65,7 +73,8 @@ body {
 
 .crab2__img {
   position: absolute;
-  max-block-size: 10%;
+  max-width: 10%;
+  max-height: 10%; 
   top: 90%;
   left: 45%;
   z-index: 21;
@@ -96,7 +105,9 @@ body {
 
 .diver__img {
   position: absolute;
-  max-block-size: 10%;
+  
+  max-width: 10%;
+  max-height: 10%; 
   top: 15%;
   left: 20%;
   z-index: 25;
@@ -105,7 +116,8 @@ body {
 
 .light__img {
   position: absolute;
-  max-block-size: 18%;
+  max-width: 18%;
+  max-height: 18%; 
   top: 33%;
   left: 21%;
   z-index: 25;
@@ -179,7 +191,9 @@ body {
 .weirdFish__img {
   position: absolute;
   opacity: 0.4;
-  max-block-size: 10%;
+  
+  max-width: 10%;
+  max-height: 10%; 
   left: 5%;
   top: 60%;
 }
@@ -211,7 +225,8 @@ body {
 .weirdFish2__img {
   position: absolute;
   opacity: 0.7;
-  max-block-size: 10%;
+  max-width: 10%;
+  max-height: 10%; 
   right: 30%;
   top: 55%;
 }
@@ -301,7 +316,8 @@ body {
 /* pearl blink animation. Simulating a shiny pearl */
 .blink__img {
   position: absolute;
-  max-block-size: 8%;
+  max-width: 8%;
+  max-height: 8%; 
   top: 89.5%;
   left: 49%;
   z-index: 30;
@@ -336,7 +352,9 @@ body {
 /*anchor animation. Two seperate pictures moving together simulating one picture*/
 .anchor__img {
   position: absolute;
-  max-block-size: 20%;
+  
+  max-width: 20%;
+  max-height: 20%; 
   transform: rotate(-20deg);
   top: 0%;
   left: 15.5%;
@@ -377,7 +395,9 @@ body {
 
 .octopus__img {
   position: absolute;
-  max-block-size: 20%;
+  
+  max-width: 20%;
+  max-height: 20%; 
   left: 48%;
   top: 50%;
   z-index: 20;
@@ -461,7 +481,9 @@ body {
 
 .boat__img {
   position: absolute;
-  max-block-size: 38%;
+  
+  max-width: 38%;
+  max-height: 38%; 
   top: -30%;
   left: 2%;
 }
@@ -494,7 +516,8 @@ body {
 
 .flask__img {
   top: -5%;
-  max-block-size: 15%;
+  max-width: 15%;
+  max-height: 15%; 
   transform: rotate(70deg);
   position: absolute;
   left: 50%;
@@ -529,7 +552,9 @@ body {
 
 .trash1__img {
   top: -5%;
-  max-block-size: 15%;
+ 
+  max-width: 15%;
+  max-height: 15%; 
   transform: rotate(40deg);
   position: absolute;
   right: 10%;
@@ -566,7 +591,8 @@ body {
 /*uses same trashWave animation here, but decreases duration for some inconsistensy between the two trashbags*/
 .trash2__img {
   top: -5%;
-  max-block-size: 15%;
+  max-width: 15%;
+  max-height: 15%; 
   transform: rotate(-40deg);
   position: absolute;
   left: 9%;
