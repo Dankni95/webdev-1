@@ -312,7 +312,7 @@ despite not having their size altered */
 
 .success--animation {
 	animation: missionpassed;
-	animation-delay: 20s;
+	animation-delay: 18s;
 	animation-duration: 6s;
 	animation-iteration-count: infinite;
 }
