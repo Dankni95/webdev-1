@@ -238,7 +238,7 @@ body {
 /* Submarine animation from the pier and down */
 
 .submarine__image--animation {
-  animation: submarine 10s ease 17s;
+  animation: submarine 10s ease 17s forwards;
 }
 
 @keyframes submarine {
@@ -650,5 +650,5 @@ body {
 
 /* next button animation in mainStyle.css */
 .nextBtn__image--animation {
-  animation: nextBtn 1s ease 20s infinite;
+  animation: nextBtn 1s ease 23s infinite;
 }
