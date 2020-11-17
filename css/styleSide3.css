@@ -5,3 +5,459 @@ body {
     background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(19, 45, 85, 1) 0%, rgba(19, 115, 135, 1) 100%);
 }
 
+/* positioning placeholder */
+
+.sand__img {
+    position: absolute;
+    width: 45%;
+    height: 20%;
+    top: -12%;
+    left: 0%;
+
+}
+
+.sand__img--rotate {
+    transform: rotate(175deg);
+
+}
+
+/* plant positioning and water effect */
+
+.rev__img {
+    position: absolute;
+    width: 20%;
+    height: 25%;
+    top: -20%;
+    left: 89%;
+    animation: waterEffect 7s linear alternate infinite;
+}
+
+.rev_img--rotate {
+    transform: rotate(255deg);
+
+}
+
+.monster__img {
+    position: absolute;
+    width: 35%;
+    height: 45%;
+    top: 35%;
+    left: 2%;
+    transform: scaleX(-1);
+    z-index: 4;
+
+}
+
+
+
+.sub__image {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 25%;
+    left: 60%;
+}
+
+.explosion__image {
+    position: absolute;
+    width: 35%;
+    height: 45%;
+    top: 15%;
+    left: 2%;
+    opacity: 0;
+    transform: scale(1);
+    z-index: -1;
+
+}
+
+
+
+.missile__image {
+    position: absolute;
+    width: 4%;
+    height: 47%;
+    top: 34%;
+    transform: rotate(270deg);
+    z-index: -1;
+}
+
+
+
+
+.missile__image {
+    left: 75%;
+    transition: 550ms all ease-in;
+    opacity: 1;
+
+}
+
+
+/*  checkbox toggling placeholder  */
+
+/* checkbox for missile animation  */
+
+#toggle-1:checked~.missile__image {
+    left: 35%;
+    opacity: 0;
+
+}
+
+/* checkbox for explosion animation  */
+
+#toggle-1:checked~.explosion__image {
+    animation: explosion 1s ease-in-out forwards;
+}
+
+@keyframes explosion {
+ 
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+
+    }
+
+}
+
+/* animation placeholder */
+
+
+
+/* rocket pushes out monster animation */
+#toggle-1:checked~.monster__img {
+
+    animation: push 900ms linear 100ms forwards;
+}
+
+
+@keyframes push {
+    0% {
+        opacity: 1;
+
+
+    }
+
+
+    50% {
+        left: -150%;
+        transform: rotate(345deg);
+
+    }
+
+
+    100% {
+        left: -150%;
+
+    }
+
+}
+
+/* monster movement in water animation */
+
+.monster__img--animation {
+    animation: waterEffect 3s ease-in-out 1ms alternate infinite;
+
+
+}
+
+/* water effect // and sub entry/exit */
+
+.sub__image--animation {
+    animation: waterEffect 7s linear alternate infinite, subEntry 10s, subExit 9s ease 18s forwards;
+
+}
+
+
+
+@keyframes waterEffect {
+    0% {
+        height: 48%;
+
+
+
+    }
+
+    50% {
+
+        height: 45%;
+        padding-left: 10px;
+
+
+
+    }
+
+    100% {
+        height: 43%;
+    }
+
+}
+
+@keyframes subEntry {
+    0% {
+        opacity: 1;
+        top: -80%;
+
+
+    }
+
+
+    50% {
+        opacity: 1;
+        top: 25%;
+        left: 40%;
+
+    }
+
+
+    100% {
+        top: 25%;
+        left: 60%;
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes subExit {
+    0% {
+        top: 25%;
+        left: 60%;
+
+    }
+
+
+
+    100% {
+        top: 100%;
+
+
+    }
+
+}
+        /* missile animation hiding behind sub and reusing push animation to hide */
+
+        .missile__image--animation{
+            animation: hideMissile 8.5s linear, push 1ms ease 16s forwards;
+        
+        }
+        
+        /* hiding missile behind sub with animation because i cant use opacity.. */
+        
+        @keyframes hideMissile {
+            0% {
+                top: -45%;
+                width: 1%;
+                height: 17%;
+        
+            }
+        
+        
+            50% {
+                top: 45%;
+                left: 54%;
+        
+            }
+        
+        
+            100% {
+                top: 30%;
+                left: 72%;
+        
+            }
+            
+        }
+        
+        
+
+/* hiding checkbox button placeholder */
+
+
+/* hiding the toggle checkbox */
+#toggle-1 {
+    display: none;
+}
+
+/* label button */
+
+.desc__label {
+    position: absolute;
+    font-size: 25%;
+    font-size: 1vmax;
+    color: whitesmoke;
+    line-height:170%;
+    text-align: center;
+    border: 0.5vh solid blueviolet;
+    width: 8%;
+    height: 5%;
+    top: 68%;
+    left: 59%;
+    z-index: 1;
+    opacity: 0;
+    animation: hideBtn 10s ease-out 7s forwards;
+
+}
+
+        /* hiding button after 10s visibility  */
+
+
+@keyframes hideBtn {
+    0% {
+
+        opacity: 1;
+        cursor: pointer;
+
+    
+
+    }
+    99% {
+
+        opacity: 1;
+        cursor: pointer;
+
+    }
+
+    100% {
+
+        opacity: 0;
+        cursor: default;
+
+    }
+}
+
+/* after one click hide the button */
+
+#toggle-1:checked~.desc__label {
+    display: none;
+
+}
+
+
+
+/* fishes placeholder */
+.fish {
+    z-index: -1;
+}
+
+.fish1__image {
+    position: absolute;
+    width: 3%;
+    height: 2%;
+    top: 67%;
+    left: 59%;
+    animation: fishes 50s ease-in alternate infinite;
+
+}
+
+.fish2__image {
+    position: absolute;
+    width: 5%;
+    height: 3%;
+    top: 77%;
+    left: 59%;
+    animation: fishes 29s ease-in alternate infinite;
+
+}
+
+.fish3__image {
+    position: absolute;
+    width: 5%;
+    height: 4%;
+    top: 57%;
+    left: 49%;
+    animation: fishes 26s ease-in normal infinite;
+
+}
+
+.fish4__image {
+    position: absolute;
+    width: 7%;
+    height: 5%;
+    top: 199%;
+    left: 129%;
+    animation: fishes 50s ease-in-out 5s infinite;
+}
+
+/* reused minifishes from fish 1 */
+
+.minifishes__div img {
+    z-index: -1;
+    width: 1%;
+    height: 1%;
+}
+
+/* positioning  */
+
+.fish1_1__image {
+    position: absolute;
+    top: 37%;
+    left: 49%;
+    transform: scaleX(-1);
+    animation: fishes 29s ease-in 1s alternate infinite;
+
+}
+
+.fish1_2__image {
+    position: absolute;
+    top: 17%;
+    left: 79%;
+    animation: fishes 27s ease-in normal infinite;
+
+}
+
+.fish1_3__image {
+    position: absolute;
+    top: 97%;
+    left: 39%;
+    transform: scaleX(-1);
+    animation: fishes 25s ease-in alternate-reverse infinite;
+
+}
+
+.fish1_4__image {
+    position: absolute;
+    top: 87%;
+    left: 89%;
+    animation: fishes 15s ease-in 500ms alternate-reverse infinite;
+
+}
+
+.fish1_5__image {
+    position: absolute;
+    top: 37%;
+    left: 19%;
+    transform: scaleX(-1);
+    animation: fishes 17s ease-in alternate-reverse infinite;
+
+}
+
+
+
+/* fishes movement and water effect */
+
+@keyframes fishes {
+    0% {
+        top: 100%;
+        transform: translateX(420%);
+    }
+
+    50% {
+        left: 35%;
+        top: 78%;
+
+
+    }
+
+    100% {
+        left: -100%;
+        transform: translateY(-700%);
+        opacity: 0.4;
+
+    }
+}
+
+/* next button animation in mainStyle.css */
+.nextBtn__image--animation {
+    animation: nextBtn 1s ease 20s infinite;
+}
