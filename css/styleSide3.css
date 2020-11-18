@@ -327,10 +327,14 @@ despite not having their size altered */
 	50% {
 		opacity: 1;
 		transform: scale(0.9);
+		cursor: pointer;
+
 	}
 
 	100% {
 		opacity: 1;
 		transform: scale(1.2);
+		cursor: pointer;
+
 	}
 }
