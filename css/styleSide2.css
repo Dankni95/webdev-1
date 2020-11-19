@@ -1,8 +1,8 @@
 /* This is stylesheet for page 2.*/
 
 body {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(19, 45, 85, 1) 0%, rgba(19, 115, 135, 1) 100%);
+    background: #020024;
+    background: linear-gradient(180deg, #020024 0%, #132d55 0%, #137387 100%);
 }
 
 /* positioning placeholder */
@@ -279,12 +279,12 @@ body {
 
 .desc__label {
     position: absolute;
-    font-size: 25%;
     font-size: 1vmax;
-    color: whitesmoke;
-    line-height: 170%;
+    font-weight: bold;
+    color: #f5f5f5;
     text-align: center;
-    border: 0.5vh solid blueviolet;
+    border: 0.5vh solid #8a2be2;
+    padding: 0.83vh;
     width: 8%;
     height: 5%;
     top: 68%;
@@ -293,6 +293,11 @@ body {
     opacity: 0;
     animation: hideBtn 10s ease-out 7s forwards;
 
+}
+
+.desc__label:hover {
+    background-color: #892be294;
+    transform: scale(1.03);
 }
 
 /* hiding button after 10s visibility  */
@@ -341,9 +346,9 @@ body {
     position: absolute;
     width: 3%;
     height: 2%;
-    top: 67%;
+    top: 107%;
     left: 59%;
-    animation: fishes 50s ease-in alternate infinite;
+    animation: fishes 45s alternate infinite;
 
 }
 
@@ -351,19 +356,20 @@ body {
     position: absolute;
     width: 5%;
     height: 3%;
-    top: 77%;
-    left: 59%;
-    animation: fishes 29s ease-in alternate infinite;
+    top: 107%;
+    left: 42%;
+    animation: fishes 25s ease-in-out alternate infinite;
 
 }
 
 .fish3__image {
     position: absolute;
     width: 5%;
-    height: 4%;
-    top: 57%;
-    left: 49%;
-    animation: fishes 26s ease-in normal infinite;
+    height: 5%;
+    top: 1%;
+    left: -109%;
+    transform: scaleX(-1);
+    animation: fishes 30s ease-in-out alternate infinite;
 
 }
 
@@ -371,9 +377,9 @@ body {
     position: absolute;
     width: 7%;
     height: 5%;
-    top: 199%;
+    top: 109%;
     left: 129%;
-    animation: fishes 50s ease-in-out 5s infinite;
+    animation: fishes 35s ease-in-out 5s infinite;
 }
 
 /* reused minifishes from fish 1 */
@@ -388,16 +394,16 @@ body {
 
 .fish1_1__image {
     position: absolute;
-    top: 37%;
-    left: 49%;
+    top: 107%;
+    left: 109%;
     transform: scaleX(-1);
-    animation: fishes 29s ease-in 1s alternate infinite;
+    animation: fishes 29s ease-in-out alternate-reverse infinite;
 
 }
 
 .fish1_2__image {
     position: absolute;
-    top: 17%;
+    top: 117%;
     left: 79%;
     animation: fishes 27s ease-in normal infinite;
 
@@ -407,25 +413,25 @@ body {
     position: absolute;
     top: 97%;
     left: 39%;
-    transform: scaleX(-1);
-    animation: fishes 25s ease-in alternate-reverse infinite;
+    animation: fishes 25s ease-in-out 1s infinite;
 
 }
 
 .fish1_4__image {
     position: absolute;
-    top: 87%;
-    left: 89%;
-    animation: fishes 15s ease-in 500ms alternate-reverse infinite;
+    top: 99%;
+    left: 99%;
+    transform: scaleX(-1);
+    animation: fishes 43s ease-in 700ms alternate-reverse infinite;
 
 }
 
 .fish1_5__image {
     position: absolute;
-    top: 37%;
-    left: 19%;
     transform: scaleX(-1);
-    animation: fishes 17s ease-in alternate-reverse infinite;
+    top: 107%;
+    left: 19%;
+    animation: fishes 25s ease-in-out alternate-reverse infinite;
 
 }
 
@@ -436,21 +442,17 @@ body {
 @keyframes fishes {
     0% {
         top: 100%;
-        transform: translateX(420%);
     }
 
     50% {
-        left: 35%;
-        top: 78%;
-
-
+        left: 15%;
+        top: 68%;
     }
 
     100% {
         left: -100%;
-        transform: translateY(-700%);
+        transform: translateY(-900%);
         opacity: 0.4;
-
     }
 }
 
