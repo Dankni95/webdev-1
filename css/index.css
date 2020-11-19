@@ -484,7 +484,8 @@ body {
 
 .hatch__image {
   position: absolute;
-  max-block-size: 35%;
+  width: 20%;
+  height: 35%;
   top: 55%;
   left: 15%;
   z-index: 0;
