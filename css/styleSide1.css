@@ -30,7 +30,6 @@ body {
 
 .coral_red__img {
   position: absolute;
-
   max-width: 50%;
   max-height: 50%;
   left: 85%;
@@ -40,7 +39,6 @@ body {
 
 .coral_color__img {
   position: absolute;
-
   max-width: 30%;
   max-height: 30%;
   top: 75%;
@@ -50,7 +48,6 @@ body {
 
 .pearl__img {
   position: absolute;
-
   max-width: 10%;
   max-height: 10%;
   top: 87%;
@@ -66,7 +63,6 @@ body {
   top: 90%;
   left: 52%;
   z-index: 1;
-  transform: rotate(-35deg);
   opacity: 0.6;
   animation: crabMove 2s infinite;
 }
@@ -78,8 +74,7 @@ body {
   top: 90%;
   left: 45%;
   z-index: 21;
-  transform: rotate(35deg);
-  animation: crabMove 2s infinite;
+  animation: crabMove2 2s infinite;
 
 }
 
@@ -87,16 +82,34 @@ body {
 
   0% {
 
-    transform: rotate(0deg);
+    transform: rotate(-35deg);
   }
 
   50% {
 
-    transform: rotate(4deg)
+    transform: rotate(-31deg)
   }
 
   100% {
-    transform: rotate(0deg);
+    transform: rotate(-35deg);
+  }
+}
+
+
+@keyframes crabMove2 {
+
+  0% {
+
+    transform: rotate(35deg);
+  }
+
+  50% {
+
+    transform: rotate(31deg)
+  }
+
+  100% {
+    transform: rotate(35deg);
   }
 }
 
@@ -105,7 +118,6 @@ body {
 
 .diver__img {
   position: absolute;
-
   max-width: 10%;
   max-height: 10%;
   top: 15%;
@@ -552,7 +564,6 @@ body {
 
 .trash1__img {
   top: -5%;
-
   max-width: 15%;
   max-height: 15%;
   transform: rotate(40deg);
