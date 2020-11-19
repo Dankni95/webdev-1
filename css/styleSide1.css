@@ -3,10 +3,8 @@
 
 /*Static images. No animation on following elements.*/
 body {
-  background: rgb(14, 9, 107);
-  background: linear-gradient(0deg,
-      rgba(14, 9, 107, 0.9420810560552346) 5%,
-      rgba(34, 172, 201, 0.9476832969515931) 100%);
+  background: #0e096b;
+  background: linear-gradient(0deg, #0e096bf0 5%, #22acc9f2 100%);
 }
 
 .sand__img {
@@ -431,19 +429,18 @@ body {
 
 /*Octopus greets the visitors/speech bubble when submarine arrives*/
 .speechBubble {
-  font-size: 1.24vmax;
-  font-weight: bold;
-  max-width: 13%;
-  max-height: 30%;
-  text-align: center;
-  background: lightblue;
-  color: navy;
-  padding: 1vh 1vh 1vh 1vh;
   position: absolute;
   top: 50%;
   left: 54%;
+  font-size: 1.23vmax;
+  font-weight: bold;
+  max-width: 13%;
+  max-height: 32%;
+  text-align: center;
+  background: lightblue;
+  color: #000080;
+  padding: 0vh 1vh 1vh 1vh;
   border-radius: 1vmax;
-
   z-index: 4;
 }
 
@@ -605,18 +602,18 @@ body {
 
 .button_nextPage {
   text-align: center;
-  line-height: 150%;
-  font-size: 1.25vmax;
+  font-size: 1.28vmax;
   position: absolute;
   border: 0.5vh solid white;
-  background: linear-gradient(0deg, rgb(0, 38, 77) 0%, rgb(51, 153, 255) 100%);
+  background: linear-gradient(#00264d 0%, #3399ff 100%);
   z-index: 100;
   max-width: 15%;
-  max-height: 10%;
+  max-height: 9%;
+  padding: 0.7vh;
   left: 65%;
   top: 85%;
   border-radius: 1vmax;
-  color: white;
+  color: #ffffff;
 }
 
 .button_nextPage--animation {
@@ -624,16 +621,16 @@ body {
 }
 
 a:link {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 
 a:hover {
-  background: linear-gradient(0deg, red 0%, white 100%);
+  background: linear-gradient(#ff0000, #ffffff 100%);
 }
 
 a:visited {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 
