@@ -336,7 +336,7 @@ body {
   }
 }
 
-/* Boat placeholder with geir og geirine */
+/* Boat placeholder with Geir og Geirine */
 
 .boat {
   position: absolute;
@@ -396,7 +396,8 @@ body {
 
 }
 
-/*Animation for Geir and Geirine walking out of the boat*/
+/* Animation for Geir and Geirine walking out of the boat */
+
 .geir__image--animation {
   animation: ontoPlatformGeir 5s linear 7s forwards;
 }
@@ -479,7 +480,8 @@ body {
   }
 
 }
-/*Hatch opening on top of submarine */
+/* Hatch opening on top of submarine */
+
 .hatch__image {
   position: absolute;
   max-block-size: 35%;
@@ -533,7 +535,8 @@ body {
 }
 
 
-/* hiding the toggle checkbox */
+/* Hiding the toggle checkbox */
+
 #toggle-1 {
   display: none;
 }
@@ -567,7 +570,7 @@ body {
 
 }
 
-/* hiding button after 10s visibility  */
+/* Hiding button after 10s visibility  */
 
 
 @keyframes hideBtn {
@@ -595,7 +598,7 @@ body {
   }
 }
 
-/* after one click hide the button */
+/* After one click hide the button */
 
 
 #toggle-1:checked~.rope__image {
@@ -659,7 +662,7 @@ body {
   }
 }
 
-/* next button animation in mainStyle.css */
+/* Next button animation in mainStyle.css */
 .nextBtn__image--animation {
   animation: nextBtn 1s ease 23s infinite;
 }
